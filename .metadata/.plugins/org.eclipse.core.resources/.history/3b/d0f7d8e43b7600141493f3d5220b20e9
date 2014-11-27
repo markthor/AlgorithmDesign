@@ -1,0 +1,12 @@
+package src.logic
+
+public class StreamingLogic {
+	private static final int numberOfTopGenres = 4;
+	private static StreamingLogic instance = new StreamingLogic();
+	
+	public int[] 
+	
+	private static StreamingLogic getInstance() {
+		return instance;
+	}
+}
