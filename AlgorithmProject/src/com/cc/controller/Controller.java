@@ -1,8 +1,6 @@
 package com.cc.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import com.cc.data.Parser;
 import com.cc.logic.MisraGriesLogic;
 
