@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.cc.data.Parser;
-import com.cc.logic.StreamingLogic;
+import com.cc.logic.MisraGriesLogic;
 
 public class Controller {
 	public static void main(String args[]) {
@@ -43,7 +43,7 @@ public class Controller {
 		}
 
 		
-		String[] result = StreamingLogic.getTopGenres(testList.iterator(), 0.15);
+		String[] result = MisraGriesLogic.getTopGenres(testList.iterator(), 0.15);
 		for(int i = 0; i < result.length; i++) {
 			System.out.println(result[i]);
 		}
