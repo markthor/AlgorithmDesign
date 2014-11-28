@@ -5,7 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class NaiveLogic {
-	public static String[] getTopString(Iterator<String> stream, double percentage) {
+
+	public static String[] getTopStrings(Iterator<String> stream, double percentage) {
 		Map<String, Integer> counters = new HashMap<String, Integer>();
 		int total = 0;
 		
@@ -25,10 +26,10 @@ public class NaiveLogic {
 	}
 	
 	private static String[] getHighestValueKeysOfMap(Map<String, Integer> map, double threshold, double percentage) {
-		int buckets = (int) (1.0/percentage) + 1;
+		int max = (int) (1.0/percentage) + 1;
 		
 		Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
-		String[] result = new String[buckets];
+		String[] result = new String[max];
 
 		int i = 0;
 		while(it.hasNext()) {
