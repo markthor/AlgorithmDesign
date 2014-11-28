@@ -4,12 +4,31 @@ import java.io.IOException;
 
 import com.cc.data.Parser;
 import com.cc.logic.MisraGriesLogic;
+import com.cc.logic.NaiveLogic;
 
 public class Controller {
 	private final static String DATA_PATH = "../data/data_files/genres.txt";
 	
-	public static void main(String args[]) {
-		getMostRepresentedGenres(0.04);
+	public static void main(String args[]) {		
+		/*long start = System.nanoTime(); 
+		
+		getMostRepresentedGenres(0.10);
+		
+		long elapsedTime = System.nanoTime() - start;
+		System.out.println("Misra: ");
+		System.out.println("Time elapsed: " + elapsedTime);
+		System.out.println("Memory: " + Runtime.getRuntime().totalMemory());
+		*/
+		
+		
+		long start = System.nanoTime();  
+		
+		getNaive(0.10);
+		
+		long elapsedTime = System.nanoTime() - start;
+		System.out.println("Naive: ");
+		System.out.println("Time elapsed: " + elapsedTime);
+		System.out.println("Memory: " + Runtime.getRuntime().totalMemory());
 	}
 	
 	private static void getMostRepresentedGenres(double percentage) {
@@ -21,6 +40,8 @@ public class Controller {
 			e.printStackTrace();
 		}
 	}
+	
+
 	
 	private static void printArray(String[] s) {
 		for(int i = 0; i < s.length; i++) {
