@@ -1,10 +1,12 @@
 package com.cc.logic;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class StreamingLogic {
+public class MisraGriesLogic {
 	
 	public static String[] getTopGenres(Iterator<String> stream, double percentage) {
 		int buckets = (int) (1.0/percentage) + 1;
@@ -17,27 +19,50 @@ public class StreamingLogic {
 				map.put(genre, map.get(genre)+1);
 			} else {
 				if(map.size() < buckets) {
-					map.put(stream.next(), 1);
+					map.put(genre, 1);
 				} else {
 					shrinkMap(map, buckets);
-					map.put(stream.next(), 1);
+					map.put(genre, 1);
 				}
 			}
 		}
-		
 		return getHighestValueKeysOfMap(map, buckets);
-		
+	}
+	
+	public static String[] getTopGenres(BufferedReader stream, double percentage) {
+		int buckets = (int) (1.0/percentage) + 1;
+		// Instantiate the map.
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		String genre;
+		try{
+			while((genre=stream.readLine()) != null) {
+				if(map.containsKey(genre)) {
+					// Increase bucket count if it already exists in map.
+					map.put(genre, map.get(genre)+1);
+				} else {
+					if(map.size() < buckets) {
+						map.put(genre, 1);
+					} else {
+						shrinkMap(map, buckets);
+						map.put(genre, 1);
+					}
+				}
+			}
+		} catch(IOException exn) {
+			exn.printStackTrace();
+		}
+		return getHighestValueKeysOfMap(map, buckets);
 	}
 	
 	private static void shrinkMap(Map<String, Integer> map, int buckets) {
-		Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
 		// Iterate through the keys as long as the map is full.
 		while(map.size() == buckets) {
+			Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
 		    while (it.hasNext()) {
 		        Map.Entry<String, Integer> pair = it.next();
 		        // Remove key if it gets reduced to zero.
 		        if(pair.getValue().equals(1)) {
-		        	map.remove(pair.getKey());
+		        	it.remove();
 		        } else {
 		        // Reduce value of bucket by 1.
 		        pair.setValue(pair.getValue()-1);
