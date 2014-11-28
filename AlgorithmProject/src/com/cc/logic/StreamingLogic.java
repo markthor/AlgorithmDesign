@@ -3,6 +3,7 @@ package com.cc.logic;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class StreamingLogic {
 	private static final int NUMBER_OF_GENRES = 4;
@@ -32,7 +33,7 @@ public class StreamingLogic {
 	}
 	
 	private void shrinkMap(Map<Integer, Integer> map) {
-		Iterator it = map.entrySet().iterator();
+		Iterator<Entry<Integer, Integer>> it = map.entrySet().iterator();
 		// Iterate through the keys as long as the map is full.
 		while(map.size() == NUMBER_OF_BUCKETS) {
 		    while (it.hasNext()) {
@@ -49,7 +50,7 @@ public class StreamingLogic {
 	}
 	
 	private int[] getHighestValueKeysOfMap(Map<Integer, Integer> map) {
-		Iterator it = map.entrySet().iterator();
+		Iterator<Entry<Integer, Integer>> it = map.entrySet().iterator();
 		int[] result = new int[NUMBER_OF_GENRES];
 		int min = Integer.MAX_VALUE;
 		int minIndex = 0;
@@ -70,7 +71,7 @@ public class StreamingLogic {
 		return result;
 	}
 	
-	private static StreamingLogic getInstance() {
+	public static StreamingLogic getInstance() {
 		return instance;
 	}
 }
