@@ -8,7 +8,7 @@ import com.cc.logic.MisraGriesLogic;
 
 public class Controller {
 	public static void main(String args[]) {
-		getMostRepresentedGenre(0.15);
+		getMostRepresentedGenre(0.07);
 	}
 	
 	private static void getMostRepresentedGenre(double percentage) {
