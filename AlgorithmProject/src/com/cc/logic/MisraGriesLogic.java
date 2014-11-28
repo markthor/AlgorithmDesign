@@ -5,53 +5,58 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class MisraGriesLogic {
 	
-	public static String[] getTopGenres(Iterator<String> stream, double percentage) {
+	public static String[] getTopStrings(BufferedReader stream, double percentage) throws IOException {
 		int buckets = (int) (1.0/percentage) + 1;
 		// Instantiate the map.
 		Map<String, Integer> map = new HashMap<String, Integer>();
-		while(stream.hasNext()) {
-			String genre = stream.next();
-			if(map.containsKey(genre)) {
+		String s;
+
+		while ((s = stream.readLine()) != null) {
+			if (map.containsKey(s)) {
 				// Increase bucket count if it already exists in map.
-				map.put(genre, map.get(genre)+1);
+				map.put(s, map.get(s) + 1);
 			} else {
-				if(map.size() < buckets) {
-					map.put(genre, 1);
+				if (map.size() < buckets) {
+					map.put(s, 1);
 				} else {
 					shrinkMap(map, buckets);
-					map.put(genre, 1);
+					map.put(s, 1);
 				}
 			}
 		}
-		return getHighestValueKeysOfMap(map, buckets);
+
+		return getKeysOfMap(map);
 	}
 	
-	public static String[] getTopGenres(BufferedReader stream, double percentage) {
-		int buckets = (int) (1.0/percentage) + 1;
-		// Instantiate the map.
+	public static String[] filterResult(BufferedReader stream, String[] result, double percentage) throws IOException {
 		Map<String, Integer> map = new HashMap<String, Integer>();
-		String genre;
-		try{
-			while((genre=stream.readLine()) != null) {
-				if(map.containsKey(genre)) {
-					// Increase bucket count if it already exists in map.
-					map.put(genre, map.get(genre)+1);
-				} else {
-					if(map.size() < buckets) {
-						map.put(genre, 1);
-					} else {
-						shrinkMap(map, buckets);
-						map.put(genre, 1);
-					}
-				}
-			}
-		} catch(IOException exn) {
-			exn.printStackTrace();
+		for(int i = 0; i < result.length; i++) {
+			map.put(result[i], 0);
 		}
-		return getHighestValueKeysOfMap(map, buckets);
+		
+		int numberOfElements = 0;
+
+		String s;
+		while ((s = stream.readLine()) != null) {
+			if (map.containsKey(s))
+				map.put(s, map.get(s) + 1);
+			numberOfElements++;
+		}
+
+		int threshold = (int) Math.ceil(numberOfElements * percentage);
+		
+		Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
+	    while (it.hasNext()) {
+	    	Map.Entry<String, Integer> pair = it.next();
+	        if(pair.getValue() < threshold) it.remove();
+	    }
+	    
+	    return getKeysOfMap(map);
+		
 	}
 	
 	private static void shrinkMap(Map<String, Integer> map, int buckets) {
@@ -71,26 +76,8 @@ public class MisraGriesLogic {
 		}
 	}
 	
-	private static String[] getHighestValueKeysOfMap(Map<String, Integer> map, int buckets) {
-		Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
-		String[] result = new String[buckets];
-		int min = Integer.MAX_VALUE;
-		int minIndex = 0;
-		int i = 0;
-		while(it.hasNext()) {
-			Map.Entry<String, Integer> pair = it.next();
-			if(pair.getValue() < min) {
-				min = pair.getValue();
-				minIndex = i;
-			}
-			if(i < buckets - 1) {
-				result[i] = pair.getKey();
-			} else {
-				if(!(pair.getValue() == min))
-					result[minIndex] = pair.getKey();
-			}
-			i++;
-		}
-		return result;
+	private static String[] getKeysOfMap(Map<String, Integer> map) {
+		Set<String> keySet = map.keySet();
+		return keySet.toArray(new String[keySet.size()]);
 	}
 }

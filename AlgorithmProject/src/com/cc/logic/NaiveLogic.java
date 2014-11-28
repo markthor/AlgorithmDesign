@@ -5,16 +5,17 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class NaiveLogic {
-	public static String[] getTopGenres(Iterator<String> stream, double percentage) {
+
+	public static String[] getTopStrings(Iterator<String> stream, double percentage) {
 		Map<String, Integer> counters = new HashMap<String, Integer>();
 		int total = 0;
 		
 		while(stream.hasNext()) {
-			String genre = stream.next();
-			if(counters.containsKey(genre)) {
-				counters.put(genre, counters.get(genre)+1);
+			String s = stream.next();
+			if(counters.containsKey(s)) {
+				counters.put(s, counters.get(s)+1);
 			} else {
-				counters.put(genre, 1);
+				counters.put(s, 1);
 			}
 			total++;
 		}
@@ -25,10 +26,10 @@ public class NaiveLogic {
 	}
 	
 	private static String[] getHighestValueKeysOfMap(Map<String, Integer> map, double threshold, double percentage) {
-		int buckets = (int) (1.0/percentage) + 1;
+		int max = (int) (1.0/percentage) + 1;
 		
 		Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
-		String[] result = new String[buckets];
+		String[] result = new String[max];
 
 		int i = 0;
 		while(it.hasNext()) {
