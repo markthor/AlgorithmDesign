@@ -6,10 +6,10 @@ import com.cc.data.Parser;
 import com.cc.logic.MisraGriesLogic;
 
 public class Controller {
-	private final static String DATA_PATH = "../data/data_files/genres.txt";
+	private final static String DATA_PATH = "../data/data_files/roles_cleaned.txt";
 	
 	public static void main(String args[]) {
-		getMostRepresentedGenres(0.04);
+		getMostRepresentedGenres(0.002);
 	}
 	
 	private static void getMostRepresentedGenres(double percentage) {
