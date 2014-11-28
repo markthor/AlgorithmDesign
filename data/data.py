@@ -5,7 +5,7 @@ import codecs
 pattern = re.compile("LOCK TABLES `([\w]+)` WRITE;")
 
 # Loop through every line in the input file
-outputfile = 0
+outputfile = None
 importfile = codecs.open("data_files/import.sql", "w+", encoding="utf-8");
 with codecs.open("data_files/imdb-r.txt", "r", encoding="utf-8") as datafile:
 	for line in datafile:
