@@ -1,32 +1,36 @@
 package com.cc.logic;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 public class MisraGriesLogic {
 	
-	public static String[] getTopGenres(Iterator<String> stream, double percentage) {
+	public static String[] getTopGenres(BufferedReader stream, double percentage) {
 		int buckets = (int) (1.0/percentage) + 1;
 		// Instantiate the map.
 		Map<String, Integer> map = new HashMap<String, Integer>();
-		while(stream.hasNext()) {
-			String genre = stream.next();
-			if(map.containsKey(genre)) {
-				// Increase bucket count if it already exists in map.
-				map.put(genre, map.get(genre)+1);
-			} else {
-				if(map.size() < buckets) {
-					map.put(genre, 1);
+		String genre;
+		try{
+			while((genre=stream.readLine()) != null) {
+				if(map.containsKey(genre)) {
+					// Increase bucket count if it already exists in map.
+					map.put(genre, map.get(genre)+1);
 				} else {
-					shrinkMap(map, buckets);
-					map.put(genre, 1);
+					if(map.size() < buckets) {
+						map.put(genre, 1);
+					} else {
+						shrinkMap(map, buckets);
+						map.put(genre, 1);
+					}
 				}
 			}
+		} catch(IOException exn) {
+			exn.printStackTrace();
 		}
-		
 		return getHighestValueKeysOfMap(map, buckets);
-		
 	}
 	
 	private static void shrinkMap(Map<String, Integer> map, int buckets) {
