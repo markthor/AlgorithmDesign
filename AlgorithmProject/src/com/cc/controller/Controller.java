@@ -7,12 +7,13 @@ import com.cc.logic.MisraGriesLogic;
 import com.cc.logic.NaiveLogic;
 
 public class Controller {
-	private final static String DATA_PATH = "../data/data_files/genres.txt";
+	private final static String DATA_PATH = "../data/data_files/roles_cleaned.txt";
 	
+
 	public static void main(String args[]) {		
 		/*long start = System.nanoTime(); 
 		
-		getMostRepresentedGenres(0.10);
+		getMostRepresentedGenres(0.002);
 		
 		long elapsedTime = System.nanoTime() - start;
 		System.out.println("Misra: ");
@@ -23,7 +24,7 @@ public class Controller {
 		
 		long start = System.nanoTime();  
 		
-		getNaive(0.10);
+		getNaive(0.002);
 		
 		long elapsedTime = System.nanoTime() - start;
 		System.out.println("Naive: ");
@@ -41,7 +42,14 @@ public class Controller {
 		}
 	}
 	
-
+	private static void getNaive(double percentage) {
+		try {
+			String[] result = NaiveLogic.getTopStrings(Parser.getGenresAsStream(DATA_PATH), percentage);
+			printArray(result);
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	private static void printArray(String[] s) {
 		for(int i = 0; i < s.length; i++) {
