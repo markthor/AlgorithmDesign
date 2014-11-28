@@ -17,10 +17,10 @@ public class MisraGriesLogic {
 				map.put(genre, map.get(genre)+1);
 			} else {
 				if(map.size() < buckets) {
-					map.put(stream.next(), 1);
+					map.put(genre, 1);
 				} else {
 					shrinkMap(map, buckets);
-					map.put(stream.next(), 1);
+					map.put(genre, 1);
 				}
 			}
 		}
