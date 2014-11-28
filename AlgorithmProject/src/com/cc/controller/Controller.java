@@ -3,10 +3,12 @@ package com.cc.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cc.data.Parser;
 import com.cc.logic.StreamingLogic;
 
 public class Controller {
 	public static void main(String args[]) {
+		
 		List<String> testList = new ArrayList<String>();
 		testList.add("Porn");
 		testList.add("Porn");
@@ -32,6 +34,13 @@ public class Controller {
 		testList.add("Romance");
 		testList.add("Comedy");
 		testList.add("Dungeon");
+		testList = Parser.getGenres("../data/data_files/genres.txt");
+		if(testList == null) {
+			System.out.println("List is null");
+			System.exit(0);
+		} else {
+			System.out.println("Size of list: " + testList.size());
+		}
 
 		
 		String[] result = StreamingLogic.getTopGenres(testList.iterator(), 0.15);
