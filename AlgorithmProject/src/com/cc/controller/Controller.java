@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.cc.data.Parser;
 import com.cc.logic.MisraGriesLogic;
+import com.cc.logic.NaiveLogic;
 
 public class Controller {
 	private final static String DATA_PATH = "../data/data_files/roles_cleaned.txt";
@@ -14,8 +15,11 @@ public class Controller {
 	
 	private static void getMostRepresentedGenres(double percentage) {
 		try {
-			String[] result = MisraGriesLogic.getTopStrings(Parser.getGenresAsStream(DATA_PATH), percentage);
+			String[] result;
+			result = MisraGriesLogic.getTopStrings(Parser.getGenresAsStream(DATA_PATH), percentage);
 			result = MisraGriesLogic.filterResult(Parser.getGenresAsStream(DATA_PATH), result, percentage);
+			printArray(result);
+			result = NaiveLogic.getTopStrings(Parser.getGenresAsStream(DATA_PATH), percentage);
 			printArray(result);
 		} catch(IOException e) {
 			e.printStackTrace();
