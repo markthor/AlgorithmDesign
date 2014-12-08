@@ -11,7 +11,7 @@ public class Controller {
 	
 
 	public static void main(String args[]) {		
-		/*long start = System.nanoTime(); 
+		long start = System.nanoTime(); 
 		
 		getMostRepresentedGenres(0.002);
 		
@@ -19,10 +19,10 @@ public class Controller {
 		System.out.println("Misra: ");
 		System.out.println("Time elapsed: " + elapsedTime);
 		System.out.println("Memory: " + Runtime.getRuntime().totalMemory());
-		*/
 		
 		
-		long start = System.nanoTime();  
+		
+		/*long start = System.nanoTime();  
 		
 		getNaive(0.002);
 		
@@ -30,6 +30,7 @@ public class Controller {
 		System.out.println("Naive: ");
 		System.out.println("Time elapsed: " + elapsedTime);
 		System.out.println("Memory: " + Runtime.getRuntime().totalMemory());
+		*/
 	}
 	
 	private static void getMostRepresentedGenres(double percentage) {

@@ -21,7 +21,6 @@ public class NaiveLogic {
 			}
 			total++;
 		}
-		
 		double threshold = total * percentage;
 		
 		return getHighestValueKeysOfMap(counters, threshold, percentage);
