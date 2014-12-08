@@ -11,6 +11,7 @@ public class MisraGriesLogic {
 	
 	public static String[] getTopStrings(BufferedReader stream, double percentage) throws IOException {
 		int buckets = (int) (1.0/percentage) + 1;
+		System.out.println("Number of max entities in map for Misra Gries is " + buckets + ".");
 		// Instantiate the map.
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		String s;
