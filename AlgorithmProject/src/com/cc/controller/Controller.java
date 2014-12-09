@@ -11,7 +11,7 @@ import com.cc.logic.ReservoirSample;
 
 public class Controller {
 	private final static String DATA_PATH = "../data/data_files/roles_cleaned.txt";
-	
+
 	public static void main(String args[]) {
 		getMovies();
 		//getMostRepresentedGenres(0.002);
@@ -39,6 +39,16 @@ public class Controller {
 			printArray(result);
 			System.out.println("\nReservoir Sampling:");
 			printArray(ReservoirSample.getTopStrings(Parser.getGenresAsStream(DATA_PATH), percentage));
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+
+	private static void getNaive(double percentage) {
+		try {
+			String[] result = NaiveLogic.getTopStrings(Parser.getGenresAsStream(DATA_PATH), percentage);
+			printArray(result);
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
