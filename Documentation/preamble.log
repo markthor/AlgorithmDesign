@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.12)  11 DEC 2014 15:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.12)  11 DEC 2014 15:37
 entering extended mode
 **preamble.tex
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\preamble.tex
+
+(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Documentation\preamble.
+tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -467,9 +469,7 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 \f@ncyO@olf=\skip62
 \f@ncyO@orf=\skip63
 )
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\preamble.aux
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\math-test.aux)
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\template.aux))
+No file preamble.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
@@ -484,7 +484,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 84.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 84.
-
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
@@ -603,7 +602,8 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\math-test.tex
+(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Documentation\ch/math-t
+est.tex
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 10.07397pt on input line 1.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -616,13 +616,14 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 7.63599pt on input line 1.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 5.51999pt on input line 1.
-)
-[2
+) [2
 
-] (C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\template.tex
+]
+(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Documentation\ch/templa
+te.tex
 LaTeX Font Info:    Try loading font information for TS1+futs on input line 35.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
 Package microtype Info: Loading generic settings for font family
@@ -631,29 +632,32 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 37.
- [3
+
+[3
 
 
-])
-[4] (C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\preamble.aux
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\math-test.aux)
-(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Report\template.aux)) )
- 
+]) [4]
+(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Documentation\preamble.
+aux
+(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Documentation\ch/math-t
+est.aux)
+(C:\Users\Precht\Documents\Repositories\AlgorithmDesign\Documentation\ch/templa
+te.aux)) ) 
 Here is how much of TeX's memory you used:
- 6407 strings out of 493921
- 98191 string characters out of 3144872
- 217070 words of memory out of 3000000
- 9454 multiletter control sequences out of 15000+200000
+ 6401 strings out of 493921
+ 97930 string characters out of 3144872
+ 216558 words of memory out of 3000000
+ 9452 multiletter control sequences out of 15000+200000
  100692 words of font info for 165 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 39i,17n,47p,532b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+ 39i,17n,47p,535b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
 Output written on preamble.pdf (4 pages, 46990 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
