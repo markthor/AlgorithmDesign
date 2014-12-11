@@ -6,7 +6,8 @@ def include(role):
 		role.startswith("themselves") or role.startswith("Themselves") or
 		role.startswith("herself") or role.startswith("Herself") or
 		role.startswith("performer") or role.startswith("Performer") or
-		role.startswith("additional") or role.startswith("Additional"):
+		role.startswith("additional") or role.startswith("Additional") or
+		role.startswith("extra" or role.startswith("Extra"):
 		return False
 	else:
 		return True
