@@ -1,7 +1,9 @@
+% !TEX root = ../preamble.tex
 \section{Finding similar movies}
 
 \subsection{Jaccard similarity}
-Movie similarity is defined as Jaccard similarity of sets of a subset of movie attributes. Given two sets \textit{A} and \textit{B} the Jaccard similarity coefficient, \textit{j}, is defined as \(j = \frac{|A \cap B|}{|A \cup B|}\). The attributes considered when measuring similarity is title, genres, actors and directors. A set of actors is the identifiers of the actors having roles in the movie, a set of directors is the identifiers of the directors, and a set of genres is the names of the genres of the movie. The set that movie similarity is measured from is the union of all these sets as well as the title of the movie and is denoted \textit{C}.
+Movie similarity is defined as Jaccard similarity of sets of a subset of movie attributes. Given two sets \textit{A} and \textit{B} the Jaccard similarity coefficient, \textit{j}, is defined as \(j = \frac{|A \cap B|}{|A \cup B|}\). \\ \\
+ The attributes considered when measuring similarity is title, genres, actors and directors. A set of actors is the identifiers of the actors having roles in the movie, a set of directors is the identifiers of the directors, and a set of genres is the names of the genres of the movie. The set that movie similarity is measured from is the union of all these sets as well as the title of the movie and is denoted \textit{C}.
 
 
 \subsection{Min Hashing}
@@ -16,12 +18,11 @@ While Min Hashing produces a signature consuming significantly less space than \
 For the representation to be suitable for locality-sensitive hashing, each hash function has to be applied on each \(C_1, C_2,\ \dots\ , C_m\), producing \(m\) vectors \(S_1, S_2,\ \dots\ , S_m\), resulting in a matrix that is the input for the locality-sensitive hashing.
 
 \begin{table}[h]
-\begin{tabular}{|l|l|l|l|l|}
-\hline
- & \(S_1\) & \(S_2\)  & \(S_3\)  &  \(S_4\) \\ \hline
+\begin{tabular}{l||l|l|l|l}
+ & \(S_1\) & \(S_2\)  & \(S_3\)  &  \(S_4\) \\ \hline \hline
  \(h_1(C)\) &   714  & 55 & 10034 & 183 \\ \hline
   \(h_2(C)\) &     2 & 5213 & 3921 & 5213 \\ \hline
- \(h_3(C)\) &     8322 & 377  & 475 & 15632 \\ \hline
+ \(h_3(C)\) &     8322 & 377  & 475 & 15632
 \end{tabular}
 \centering
 \caption{In this example, the 714'th element of the permutation of the universal set for \(h_1(S)\) is the first element that the universal set and \(S_1\) had in common, starting from element 0.}
