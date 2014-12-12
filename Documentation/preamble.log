@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.19)  12 DEC 2014 11:56
 entering extended mode
 **D:/workspace/AlgorithmDesign/Documentation/preamble.tex
 (D:/workspace/AlgorithmDesign/Documentation/preamble.tex
+=======
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.7)  12 DEC 2014 11:53
+entering extended mode
+**C:/Users/Andreas/Repositories/AlgorithmDesign/Documentation/preamble.tex
+(C:/Users/Andreas/Repositories/AlgorithmDesign/Documentation/preamble.tex
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,6 +20,7 @@ german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\koma-script\scrartcl.cls"
 Document Class: scrartcl 2013/12/19 v3.12 KOMA-Script document class (article)
 ("D:\Program Files\MiKTeX\tex\latex\koma-script\scrkbase.sty"
@@ -96,18 +104,46 @@ Package typearea Info: These are the values describing the layout:
 \c@table=\count87
 \bibindent=\dimen102
 ) ("D:\Program Files\MiKTeX\tex\latex\base\inputenc.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\utf8.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\t1enc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -257,7 +293,11 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\ot1enc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -288,7 +328,11 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\omsenc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -312,6 +356,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -320,6 +365,16 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
 ("D:\Program Files\MiKTeX\tex\latex\fourier\fourier.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fourier.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
 Now handling font encoding FML ...
 ... no UTF-8 mapping file for font encoding FML
@@ -328,6 +383,7 @@ Now handling font encoding FMS ...
 Now handling font encoding FMX ...
 ... no UTF-8 mapping file for font encoding FMX
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -336,6 +392,16 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
 ("D:\Program Files\MiKTeX\tex\latex\base\textcomp.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -350,12 +416,20 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\ts1enc.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\ts1enc.dfu"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -490,7 +564,11 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\fourier\fourier-orns.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fourier-orns.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
 )
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
@@ -589,12 +667,17 @@ LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
 LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
 \symUfutm=\mathgroup5
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\generic\babel\babel.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
@@ -602,79 +685,123 @@ File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("D:\Program Files\MiKTeX\tex\generic\babel\babel.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count88
+\babel@savecnt=\count87
 \U@D=\dimen103
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\microtype\microtype.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
 \MT@toks=\toks17
-\MT@count=\count89
+\MT@count=\count88
 LaTeX Info: Redefining \textls on input line 766.
 \MT@outer@kern=\dimen104
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
-\MT@listname@count=\count90
+\MT@listname@count=\count89
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\microtype\microtype-pdftex.def"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip48
+\MT@outer@space=\skip43
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\microtype\microtype.cfg"
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
 ("D:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
 ("D:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen105
 ))
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen106
 )
 ("D:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count91
+\inf@bad=\count90
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count92
-\leftroot@=\count93
+\uproot@=\count91
+\leftroot@=\count92
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count94
-\DOTSCASE@=\count95
+\classnum@=\count93
+\DOTSCASE@=\count94
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
+\Mathstrutbox@=\box26
+\strutbox@=\box27
 \big@size=\dimen107
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count96
-\c@MaxMatrixCols=\count97
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
-\c@parentequation=\count98
-\dspbrk@lvl=\count99
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
 \tag@help=\toks19
-\row@=\count100
-\column@=\count101
-\maxfields@=\count102
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
 \andhelp@=\toks20
 \eqnshift@=\dimen108
 \alignsep@=\dimen109
@@ -683,13 +810,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen112
 \lineht@=\dimen113
 \@envbody=\toks21
-\multlinegap=\skip50
-\multlinetaggap=\skip51
+\multlinegap=\skip45
+\multlinetaggap=\skip46
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup6
 \symAMSb=\mathgroup7
@@ -697,18 +828,23 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\amscls\amsthm.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks23
 \thm@bodyfont=\toks24
 \thm@headfont=\toks25
 \thm@notefont=\toks26
 \thm@headpunct=\toks27
-\thm@preskip=\skip52
-\thm@postskip=\skip53
-\thm@headsep=\skip54
+\thm@preskip=\skip47
+\thm@postskip=\skip48
+\thm@headsep=\skip49
 \dth@everypar=\toks28
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -719,10 +855,23 @@ Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
 ("D:\Program Files\MiKTeX\tex\latex\00miktex\graphics.cfg"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
@@ -730,17 +879,31 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
 ("D:\Program Files\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count103
+\Gread@gobject=\count102
 ))
 \Gin@req@height=\dimen114
 \Gin@req@width=\dimen115
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\ltxmisc\url.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
@@ -763,6 +926,30 @@ Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
 ("D:\Program Files\MiKTeX\tex\generic\oberdiek\ifluatex.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -771,11 +958,19 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 ("D:\Program Files\MiKTeX\tex\generic\oberdiek\ifpdf.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -789,14 +984,33 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\float\float.sty"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count104
+\c@float@type=\count103
 \float@exts=\toks29
-\float@box=\box29
+\float@box=\box28
 \@float@everytoks=\toks30
-\@floatcapt=\box30
+\@floatcapt=\box29
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks31
+\footnotemargin=\dimen116
+\c@pp@next@reset=\count104
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\sectsty\sectsty.sty"
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
@@ -844,38 +1058,103 @@ LaTeX Font Info:    Try loading font information for FML+futm on input line 92.
 
 
 ("D:\Program Files\MiKTeX\tex\latex\fourier\fmlfutm.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty"
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip50
+\f@ncyO@elh=\skip51
+\f@ncyO@erh=\skip52
+\f@ncyO@olh=\skip53
+\f@ncyO@orh=\skip54
+\f@ncyO@elf=\skip55
+\f@ncyO@erf=\skip56
+\f@ncyO@olf=\skip57
+\f@ncyO@orf=\skip58
+)
+
+LaTeX Warning: Unused global option(s):
+    [paper=a4,fontsize=11pt].
+
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\preamble.aux
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Introduction.au
+x)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Most_frequent_g
+enres.aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Most_similar_mo
+vies.aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Implementation.
+aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/math-test.aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/template.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 93.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 93.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 93.
 
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\fourier\fmsfutm.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 93.
 
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\fourier\fmxfutm.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 93.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 93.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\fourier\t1futs.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 )
-LaTeX Info: Redefining \microtypecontext on input line 92.
+LaTeX Info: Redefining \microtypecontext on input line 93.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -890,80 +1169,117 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\context\base\supp-pdf.mkii"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count105
-\scratchdimen=\dimen116
-\scratchbox=\box31
+\scratchdimen=\dimen117
+\scratchbox=\box30
 \nofMPsegments=\count106
 \nofMParguments=\count107
-\everyMPshowfont=\toks31
+\everyMPshowfont=\toks32
 \MPscratchCnt=\count108
-\MPscratchDim=\dimen117
+\MPscratchDim=\dimen118
 \MPnumerator=\count109
 \makeMPintoPDFobject=\count110
+<<<<<<< HEAD
 \everyMPtoPDFconversion=\toks32
 )
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 94.
  ("D:\Program Files\MiKTeX\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+=======
+\everyMPtoPDFconversion=\toks33
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 )
-Package microtype Info: Loading generic settings for font family
-(microtype)             `cmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for OT1+bch on input line 94.
+<<<<<<< HEAD
 
 ("D:\Program Files\MiKTeX\tex\latex\psnfss\ot1bch.fd"
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
 ("D:\Program Files\MiKTeX\tex\latex\microtype\mt-bch.cfg"
+=======
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1bch.fd"
+File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-bch.cfg"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 
 )
 LaTeX Font Info:    Try loading font information for FML+futmi on input line 94
 .
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\fourier\fmlfutmi.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 94.
+(Font)              scaled to size 11.03998pt on input line 94.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 94.
+(Font)              scaled to size 8.27998pt on input line 94.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 94.
+(Font)              scaled to size 6.43999pt on input line 94.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 94.
+(Font)              scaled to size 11.03998pt on input line 94.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 94.
+(Font)              scaled to size 8.27998pt on input line 94.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 94.
+(Font)              scaled to size 6.43999pt on input line 94.
 LaTeX Font Info:    Try loading font information for U+msa on input line 94.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 ("D:\Program Files\MiKTeX\tex\latex\microtype\mt-msa.cfg"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 94.
 
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("D:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [0
 
-
-
-
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<<<<<<< HEAD
 (D:\workspace\AlgorithmDesign\Documentation\ch/Introduction.tex
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 4.
 
 ("D:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd"
+=======
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Introduction.te
+x
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 5.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
@@ -971,35 +1287,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 4.
+(Font)              scaled to size 9.19998pt on input line 6.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 4.
+(Font)              scaled to size 6.99199pt on input line 6.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 4.
+(Font)              scaled to size 5.51999pt on input line 6.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 4.
+(Font)              scaled to size 9.19998pt on input line 6.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 4.
+(Font)              scaled to size 6.99199pt on input line 6.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 4.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 7.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 7.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 7.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 7.
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 11.
+(Font)              scaled to size 5.51999pt on input line 6.
 
+Overfull \hbox (12.70073pt too wide) in paragraph at lines 6--7
+\T1/futs/m/n/10 (-20) The code is avail-able on GitHub on the fol-low-ing link 
+$\T1/cmtt/m/n/10 https : / / github . com / markthor /$
+ []
 
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 9.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 9.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 9.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 9.
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 21.
+
+<<<<<<< HEAD
 ("D:\Program Files\MiKTeX\tex\latex\fourier\ts1futs.fd"
+=======
+("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\ts1futs.fd"
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `futs' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+<<<<<<< HEAD
 ) [1
 
 ]
@@ -1013,94 +1339,81 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 \T1/futs/m/n/10.95 (+20) lem? the
  []
 
+=======
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 24.
+ [1
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 
+]) [2]
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Most_frequent_g
+enres.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
-\T1/futs/m/n/10.95 (+20) prob-lem
+\T1/futs/m/n/10 (+20) the prob-lem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-[]\T1/futs/m/n/10.95 (+20) Reservoir
+Underfull \hbox (badness 2229) in paragraph at lines 5--5
+[]\T1/futs/m/n/10 (+20) Reservoir sam-
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 12--12
-\T1/futs/m/n/10.95 (+20) sam-pling as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
-[]\T1/futs/m/n/10.95 (+20) Ninh was
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
-\T1/futs/m/n/10.95 (+20) /care with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
-\T1/futs/m/n/10.95 (+20) time com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--26
+Underfull \hbox (badness 10000) in paragraph at lines 11--19
 
  []
 
-[2
+[3
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-[]\T1/futs/m/n/10.95 (+20) Den skal
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) rettes til at
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) gerne rettes
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) være sin-gle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) til at være
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) pass. False
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) sin-gle pass.
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) pos-i-tives og
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) False pos-i-
+Underfull \hbox (badness 2310) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) false neg-a-tives
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) neg-a-tives
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) skal beskrives
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) er tilladte.
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) sandsyn-lige-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) Der skal
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/futs/m/n/10 (+20) heder for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) beskrives
+Underfull \hbox (badness 2556) in paragraph at lines 44--44
+[]\T1/futs/m/n/10 (+20) Hvornår er al-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
-\T1/futs/m/n/10.95 (+20) sandsyn-lige-
- []
+LaTeX Warning: Marginpar on page 4 moved.
 
+<<<<<<< HEAD
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--48
 \T1/futs/m/n/10.95 (+20) heder for
@@ -1157,22 +1470,64 @@ Package epstopdf Info: Source file: <img/streamingMemoryGraph.eps>
 (epstopdf)             Output file: <img/streamingMemoryGraph-eps-converted-to.
 pdf>
 (epstopdf)                    date: 2014-12-12 10:03:14
+=======
+) [4]
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Most_similar_mo
+vies.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+[]\T1/futs/m/n/10 (+20) Indsæt når
+ []
+
+) [5
+
+
+]
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Implementation.
+tex
+Package epstopdf Info: Source file: <img/streamingMemoryGraph.eps>
+(epstopdf)                    date: 2014-12-12 10:14:51
+(epstopdf)                    size: 144289 bytes
+(epstopdf)             Output file: <img/streamingMemoryGraph-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2014-12-12 10:14:51
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 (epstopdf)                    size: 36663 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/streamingMemoryGraph-ep
 s-converted-to.pdf img/streamingMemoryGraph.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
+<<<<<<< HEAD
 <img/streamingMemoryGraph-eps-converted-to.pdf, id=27, 557.08125pt x 557.08125p
+=======
+<img/streamingMemoryGraph-eps-converted-to.pdf, id=28, 557.08125pt x 557.08125p
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 t>
 File: img/streamingMemoryGraph-eps-converted-to.pdf Graphic file (type pdf)
  <use img/streamingMemoryGraph-eps-converted-to.pdf>
 Package pdftex.def Info: img/streamingMemoryGraph-eps-converted-to.pdf used on 
 input line 15.
 (pdftex.def)             Requested size: 351.31378pt x 351.32007pt.
+<<<<<<< HEAD
  [6
+=======
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
+
+Overfull \hbox (6.31378pt too wide) in paragraph at lines 15--16
+ [][] 
+ []
+
+[6
 
 
+]) [7 <C:/Users/Andreas/Repositories/AlgorithmDesign/Documentation/img/streamin
+gMemoryGraph-eps-converted-to.pdf>]
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/math-test.tex
+Overfull \hbox (3.2101pt too wide) in paragraph at lines 19--19
+[] 
+ []
+
+<<<<<<< HEAD
 ]) [7 <D:/workspace/AlgorithmDesign/Documentation/img/streamingMemoryGraph-eps-
 converted-to.pdf>]
 (D:\workspace\AlgorithmDesign\Documentation\ch/math-test.tex) [8
@@ -1211,8 +1566,49 @@ ic/fourier/fourier-ms.pfb><D:/Program Files/MiKTeX/fonts/type1/adobe/utopia/put
 b8a.pfb><D:/Program Files/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><D:/Progra
 m Files/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
 Output written on preamble.pdf (11 pages, 123541 bytes).
+=======
+) [8
+
+
+]
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/template.tex
+[9
+
+
+]) [10]
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\preamble.aux
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Introduction.au
+x)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Most_frequent_g
+enres.aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Most_similar_mo
+vies.aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/Implementation.
+aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/math-test.aux)
+(C:\Users\Andreas\Repositories\AlgorithmDesign\Documentation\ch/template.aux)) 
+) 
+Here is how much of TeX's memory you used:
+ 6127 strings out of 493921
+ 90402 string characters out of 3147277
+ 168838 words of memory out of 3000000
+ 8935 multiletter control sequences out of 15000+200000
+ 141129 words of font info for 305 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 42i,19n,43p,1018b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Andreas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ectt0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\
+Users\Andreas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1
+000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/a
+dobe/utopia/putri8a.pfb>
+Output written on preamble.pdf (11 pages, 123250 bytes).
+>>>>>>> 23851be31563b82d02dcadc22e5d99d130f1a9cb
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51718 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 42502 words of extra memory for PDF output out of 42996 (max. 10000000)
 

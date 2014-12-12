@@ -1,13 +1,6 @@
 \section{Finding the most frequently occurring genres}
 In the following section, the problem is discussed, as well as different approaches to solving it.\marginpar{what problem? the problem discussed in ...}
 
-\subsection{Terminology and notation}
-A role is a string that represents an actor’s role in a movie. The data stream, denoted \textit{S}, contains roles, with some of them being identical. The set of most occurring roles are called heavy hitters, denoted \textit{H} and are defined by \(\alpha\), the fraction of \textit{S}, that a role constitutes to be in \textit{H}.
-Let the number of roles in \textit{S} be denoted \textit{m}, and the number of occurrences of a role in \textit{S} denoted \textit{c} then the role is in \textit{H} if and only if 
-\begin{math}
-	\alpha \le \frac{c}{m}
-\end{math}. The threshold of the reservoir sampling algorithm is denoted \textit{t}.
-
 \subsection{Finding heavy hitters}
 Different algorithms solves the problem of finding the heavy hitters \textit{H} in a data set \textit{S}. A naïve approach is to store all distinct roles in the data set, and their respective count. A space concerned approach to finding the heavy hitters, as described in the section describing the Misra Gries algorithm, can reduce the space consumption.\marginpar{Reservoir sampling as well}
 
@@ -22,7 +15,7 @@ The reservoir sampling solution attempts to find heavy hitters from a stream but
 \begin{math}
 	H \subseteq R
 \end{math}. Therefore the algorithm might report false negatives.
-The algorithm is still relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\). The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \textit{H}. \\
+The algorithm is still relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\). The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \(H\). \\
 
 As with the naïve solution, the algorithm only require a single pass through initial the dataset. After the first pass through, the algorithm counts the frequency of each item in the reservoir and reports the element if the frequency is equal to or exceeds the given threshold.
 Furthermore, it requires considerably less space than the naïve solution at the expense of guaranteeing that the result is correct. It does so by having a single reservoir array with size \(O(\frac{t}{\alpha})\), defined as mentioned above. At first the array is filled with the first \(O(\frac{t}{\alpha})\) elements in the dataset, hereafter all new elements have a chance, equal to 
