@@ -22,7 +22,7 @@ The reservoir sampling solution attempts to find heavy hitters from a stream but
 \begin{math}
 	H \subseteq R
 \end{math}. Therefore the algorithm might report false negatives.
-The algorithm is still relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\). The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \textit{H}. \\
+The algorithm is still relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\). The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \(H\). \\
 
 As with the naïve solution, the algorithm only require a single pass through initial the dataset. After the first pass through, the algorithm counts the frequency of each item in the reservoir and reports the element if the frequency is equal to or exceeds the given threshold.
 Furthermore, it requires considerably less space than the naïve solution at the expense of guaranteeing that the result is correct. It does so by having a single reservoir array with size \(O(\frac{t}{\alpha})\), defined as mentioned above. At first the array is filled with the first \(O(\frac{t}{\alpha})\) elements in the dataset, hereafter all new elements have a chance, equal to 
