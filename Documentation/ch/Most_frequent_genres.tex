@@ -1,0 +1,47 @@
+\section{Finding the most frequently occurring genres}
+In the following section, the problem is discussed, as well as different approaches to solving it.\marginpar{what problem? the problem discussed in ...}
+
+\subsection{Finding heavy hitters}
+Different algorithms solves the problem of finding the heavy hitters \textit{H} in a data set \textit{S}. A naïve approach is to store all distinct roles in the data set, and their respective count. A space concerned approach to finding the heavy hitters, as described in the section describing the Misra Gries algorithm, can reduce the space consumption.\marginpar{Reservoir sampling as well}
+
+\subsection{Naïve solution}
+The naïve solution stores all distinct roles in order to find the roles with a frequency above the threshold. The algorithm contains a map with every distinct role as key, and their respective count as the corresponding value. The time complexity is O(m) while the worst case space consumptions is O(m).\marginpar{Ninh was /care with time complexity}
+
+\subsection{Reservoir Sampling}
+The reservoir sampling solution attempts to find heavy hitters from a stream but it does not guarantee it. The set of elements returned by the algorithm, \textit{R}, is in \textit{H}, such that
+\begin{math}
+	R \subseteq H
+\end{math}, but not necessarily 
+\begin{math}
+	H \subseteq R
+\end{math}. Therefore the algorithm might report false negatives.
+The algorithm is still relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\). The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \(H\). \\
+
+As with the naïve solution, the algorithm only require a single pass through initial the dataset. After the first pass through, the algorithm counts the frequency of each item in the reservoir and reports the element if the frequency is equal to or exceeds the given threshold.
+Furthermore, it requires considerably less space than the naïve solution at the expense of guaranteeing that the result is correct. It does so by having a single reservoir array with size \(O(\frac{t}{\alpha})\), defined as mentioned above. At first the array is filled with the first \(O(\frac{t}{\alpha})\) elements in the dataset, hereafter all new elements have a chance, equal to 
+\begin{math}
+	\frac{t/\alpha}{n'}
+\end{math} where \textit{n'} is the number of elements that have been processed at the given point in time,
+ of being swapped with a random element already in the the array.
+ 
+\subsection{Misra Gries}
+The Misra Gries algorithm finds heavy hitters in a data stream. It maintains a map with up to \textit{k} entries, with keys being data element identifiers. If the set of element keys in the map is denoted \textit{K}, then 
+\begin{math}
+	H \subseteq K
+\end{math}, when the algorithm has finished. The size of the map is 
+\begin{math}
+	k = \frac{1}{\alpha} + 1
+\end{math}, meaning that the fraction an element has to constitute of \textit{S} to be in \textit{H} has an inverse relation to \textit{k}.
+For each element in the data stream, the map is updated. If the key of the element already exists in the map, the value is incremented by 1. Else if the size of the map is less than \textit{k}, then the element is added to the map, with a value of 1. If the element does not exist in the map and the size of the map is \textit{k}, then the value of each key is decremented by 1 and keys with value zero is removed. This decrement procedure is repeated until the size of the map is less than \textit{k} such that the element can be added to the map.
+
+\subsubsection{Worst case example}
+The soundness of the algorithm can be explained by constructing a worst case scenario. If \(H \subseteq K\), then an element occurring \(\alpha\) times must be included in the final map. Consider a stream, with an element \textit{e} being in \textit{H} with \(\alpha = 0.2\). The stream consists of 10 elements. The map has 6 entries in this example. \textit{e} occurs twice as the first two, and the most effective way of reducing the count of \textit{e} is by filling the map and presenting an element that is not yet included in the map. Because it takes 5 distinct elements to fill the map and one additional element to reduce the count of all elements, 6 elements are required to reduce \textit{e}. The stream has 10 elements and therefore this can only happen once. Therefore the count of \textit{e} is at least 1, when the algorithm terminates.
+
+\subsubsection{Additional filtering}
+As Misra Gries returns false positives, additional filtering is needed for K=H. This is done by running the naïve solution, however the counting map only counts elements in K, which makes it as space efficient as Misra Gries.\marginpar{Den skal gerne rettes til at være single pass. False positives og false negatives er tilladte. Der skal beskrives sandsynligeheder for korrektheden}
+
+\subsubsection{Space consumption}
+The auxiliary space used by Misra Gries is \(O\left(\frac{1}{\alpha}\right)\), but as \(\alpha\) is a constant in many applications, this is regarded as constant space consumption.\marginpar{Hvornår er alpha ikke en konstant}
+
+\subsubsection{String alignment}
+The data source contains roles of different formats. To make roles that seem similar be regarded as the same string and remove uninteresting roles, the data is cleaned before being parsed to the algorithm. This involves removing strings tagged with symbols and strings that is not regarded as the kind of roles that we wish to investigate.

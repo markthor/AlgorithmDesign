@@ -27,7 +27,8 @@
 %\title{Project Report}
 %
 %%% Preamble
-\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\documentclass[paper=a4, fontsize=11pt]{article}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{fourier}
 
@@ -36,11 +37,14 @@
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
 \usepackage[pdftex]{graphicx}	
 \usepackage{url}
-
+\usepackage{epstopdf} % Used to import .eps files
+\usepackage{float}
+\usepackage[bottom]{footmisc} % Stick footnote at bottom of page
 
 %%% Custom sectioning
 \usepackage{sectsty}
-\allsectionsfont{\centering \normalfont\scshape}
+%\allsectionsfont{\centering \normalfont\scshape}
+\allsectionsfont{\normalfont\scshape}
 
 
 %%% Custom headers/footers (fancyhdr package)
@@ -67,23 +71,38 @@
 \title{
 		%\vspace{-1in} 	
 		\usefont{OT1}{bch}{b}{n}
-		\normalfont \normalsize \textsc{School of random department names} \\ [25pt]
+		\normalfont \normalsize \textsc{IT University of Denmark} \\ [25pt]
 		\horrule{0.5pt} \\[0.4cm]
-		\huge This is the title of the template report \\
+		\huge Some algorithmic title \\
 		\horrule{2pt} \\[0.5cm]
 }
 \author{
-		\normalfont 								\normalsize
-        Firstname Lastname\\[-3pt]		\normalsize
-        \today
+	\normalsize
+	Andreas Precht Poulsen
+	\and
+	\normalsize
+	Mark Thorhauge
+	\and
+	\normalsize
+	Mikkel Hvilshøj Funch
 }
-\date{}
+\date{December 17, 2014}
 
 
 %%% Begin document
 \begin{document}
 \maketitle
+\thispagestyle{empty} % Remove numbering on first page
+\setcounter{page}{0} % Make the first page number zero (not shown) so the next page starts at 1
+\clearpage
 
+\begingroup
+\let\clearpage\relax
+\include{ch/Introduction}
+\include{ch/Most_frequent_genres}
+\include{ch/Most_similar_movies}
+\include{ch/Implementation}
+\endgroup
 \include{ch/math-test}
 \include{ch/template}
 

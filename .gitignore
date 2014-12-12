@@ -16,3 +16,9 @@ data/data_files
 
 # Folders
 .metadata
+
+# Latex
+*.log
+*.aux
+*.pdf
+*.synctex.gz
