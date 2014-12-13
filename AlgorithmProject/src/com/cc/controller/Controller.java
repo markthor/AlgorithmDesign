@@ -17,14 +17,19 @@ public class Controller {
 		//getMostRepresentedGenres(0.002);
 	}
 	
-	private static void getMovies() {
+	public static List<Movie> getMovies() {
 		System.out.println("Reading imdb file and constructing movie objects...");
 		List<Movie> movies = Parser.getMovies("../data/data_files/imdb-r.txt");
+		/*
 		System.out.println(movies.size() + " movie objects constructed.");
 		System.out.println("Filtering movies with a too low number of actors, directors or genres...");
+		*/
 		Parser.filterMoviesWithLowNumberOfReferences(movies);
+		/*
 		printArray(movies.toArray());
 		System.out.println(movies.size() + " movie objects after filtering.");
+		*/
+		return movies;
 	}
 	
 	private static void getMostRepresentedGenres(double percentage) {
