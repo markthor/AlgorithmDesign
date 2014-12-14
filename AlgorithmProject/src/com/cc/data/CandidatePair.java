@@ -18,7 +18,7 @@ public class CandidatePair {
 	
 	public double jaccardSimilarity(){
 		double shared = 0;
-		double union = 0;
+		double union = 2; //2 titles
 		
 		//genres
 		for (String g : f.getGenres()) {
@@ -43,6 +43,12 @@ public class CandidatePair {
 			}
 		}
 		union += f.getDirectors().size() + s.getDirectors().size();
+		
+		//actors
+		if (f.getTitleLower() == s.getTitleLower()) {
+			shared++;
+		}
+		
 		union -= shared;
 		
 		return shared/union;

@@ -70,4 +70,8 @@ public class Movie {
 	public String getTitle(){
 		return title;
 	}
+
+	public String getTitleLower() {
+		return title.toLowerCase();
+	}
 }
