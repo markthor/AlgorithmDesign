@@ -69,17 +69,17 @@ With a continuous uniform distribution, \(f_p\) can be estimated as the integral
 \[f_p = \int\limits_0^t\ p(j)\mathrm{d}j\]
 To estimate \(f_n\), we subtract the entire area from \(t\) to \(1\) which is \(1-t\) with the integral of \(p(j)\) from \(t\) to \(1\).
 \[f_n = (1-t)-\int\limits_t^1\ p(j)\mathrm{d}j\]
+The continuous uniform distribution assumption makes the similarity \(j\) directly translatable to item pairs, and probability is over a large sample directly translatable to the fraction of item pairs returned as candidate pairs. The integral function estimates the product of item pairs and the fraction returned as candidate pairs.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=250px]{img/falseGraph.jpg}
+	\includegraphics[width=290px]{img/falseGraph.jpg}
 	\caption{The fraction of false positives or false negatives of all pairs, as a function of the number of rows and the number of bands with \(t=0.6\).}
 	\label{fig:false_graph}
 \end{figure}
 
-Figure ~\ref{fig:false_graph} visualises the connection between \(b\), \(r\), \(f_n\) and \(f_p\). The connection is complicated, but it is apparent that the sum of \(f_n\) and \(f_p\) is reduced when \(b\) and \(r\) are increased.
-\\
-\\
+Figure ~\ref{fig:false_graph} visualises the connection between \(b\), \(r\), \(f_n\) and \(f_p\). The connection is complicated, but it is apparent that the sum of \(f_n\) and \(f_p\) is reduced when \(b\) and \(r\) are increased. It is relevant to note that the uniform distribution assumption does make the fraction of false negatives seem larger and the number of false positives seem smaller than it is in a scenario where for a random pair \(Pr[j<0.5] > Pr[j>0.5]\), which is much more realistic.
+
 \subsubsection{Time complexity of similarity search}
 The time complexity of similarity search can be split into two parts, the preprocessing and the actual time to run a query after the preprocessing.\\
 The preprocessing step is hashing all N input points in L hashtables. This requires \(O(NLkt)\) time, as every input, must be put into all \(L\) hashtables and it takes \(kt\) time to do so, with \(t\) being the time to hash an input. The query step is 
