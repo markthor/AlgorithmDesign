@@ -41,8 +41,8 @@ public class Parser {
 		Iterator<Movie> it = movies.iterator();
 		while(it.hasNext()) {
 			Movie m = it.next();
-			//if(m.getActors().size() < 3 || m.getDirectors().size() < 1 || m.getGenres().size() < 1) it.remove();
-			if(m.getActors().size() < 7 || m.getDirectors().size() < 1 || m.getGenres().size() < 3) it.remove();
+			if(m.getActors().size() < 3 || m.getDirectors().size() < 1 || m.getGenres().size() < 1) it.remove();
+			//if(m.getActors().size() < 7 || m.getDirectors().size() < 1 || m.getGenres().size() < 3) it.remove();
 		}
 	}
 	
