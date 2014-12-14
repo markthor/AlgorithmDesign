@@ -40,16 +40,14 @@ Generally a reservoir size of \(k\), \(k > 1\), is desirable in order to get a m
 
 As seen in equation~\ref{eq:one_over_m2} every subset of \(S\) with size two has an equal chance of ending up in \(Res\). It follows that every subset of \(S\) with size \(k\) has an equal chance of being the final \(Res\).
 
-For the algorithm to be classified as a streaming algorithm, its space consumption must be sublinear in the length of the stream. It achieves this by having the size of the reservoir fixed. To find the optimal size of the reservoir two variables are considered, \(\epsilon\) and \(\delta\). \(\epsilon\) is the error margin that one wants to achieve with probability equal to \(1 - \delta\). Considering the algorithm estimates heavy hitters it is relevant to determine the probability that the estimate is within the error margin one allows. The size of the reservoirs is dependent on these two variables. It can be calculated using 
+For the algorithm to be classified as a streaming algorithm, its space consumption must be sublinear in the length of the stream. It achieves this by having the size of the reservoir fixed. To find the optimal size of the reservoir two variables are considered, \(\epsilon\) and \(\delta\). \(\epsilon\) is the error margin that one wants to achieve with probability equal to \(1 - \delta\). Considering the algorithm estimates heavy hitters it is relevant to determine the probability that the estimate is within the error margin one allows. The size of the reservoirs is dependent on these two variables. It can be calculated using the formula \(k=O\left(1/\epsilon^2\log\left(1/\delta\right)\right)\). 
 
+Every item is only looked at once making the time complexity \(O(m)\).
 
-
-The algorithm is relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\).
-
-As with the naïve solution, the algorithm only require a single pass through initial the dataset. After the first pass through, the algorithm counts the frequency of each item in the reservoir and reports the element if the frequency is equal to or exceeds the given threshold.
-Furthermore, it requires considerably less space than the naïve solution at the expense of guaranteeing that the result is correct. It does so by having a single reservoir array with size \(O(\frac{t}{\alpha})\), defined as mentioned above. At first the array is filled with the first \(O(\frac{t}{\alpha})\) elements in the dataset, hereafter all new elements have a chance, equal to \(\frac{t/\alpha}{n'}\) where \textit{n'} is the number of elements that have been processed at the given point in time,
- of being swapped with a random element already in the the array.
-
+%The algorithm is relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\).
+%As with the naïve solution, the algorithm only require a single pass through initial the dataset. After the first pass through, the algorithm counts the frequency of each item in the reservoir and reports the element if the frequency is equal to or exceeds the given threshold.
+%Furthermore, it requires considerably less space than the naïve solution at the expense of guaranteeing that the result is correct. It does so by having a single reservoir array with size \(O(\frac{t}{\alpha})\), defined as mentioned above. At first the array is filled with the first \(O(\frac{t}{\alpha})\) elements in the dataset, hereafter all new elements have a chance, equal to \(\frac{t/\alpha}{n'}\) where \textit{n'} is the number of elements that have been processed at the given point in time,
+% of being swapped with a random element already in the the array.
 %The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \(H\).\ \\
 % and some heavy hitters might not  \textit{R}, is in \textit{H}, such that \(R \subseteq H\), but not necessarily \(H \subseteq R\). Therefore the algorithm might report false negatives.
 
