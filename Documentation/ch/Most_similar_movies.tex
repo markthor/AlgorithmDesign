@@ -3,7 +3,7 @@
 
 \subsection{Jaccard similarity}
 Movie similarity is defined as Jaccard similarity of sets of a subset of movie attributes. Given two sets \textit{A} and \textit{B} the Jaccard similarity coefficient, \textit{j}, is defined as \(j = \frac{|A \cap B|}{|A \cup B|}\). \\ \\
- The attributes considered when measuring similarity is title, genres, actors and directors. A set of actors is the identifiers of the actors having roles in the movie, a set of directors is the identifiers of the directors, and a set of genres is the names of the genres of the movie. The set that movie similarity is measured from is the union of all these sets as well as the title of the movie and is denoted \textit{C}.
+The attributes considered when measuring similarity is title, genres, actors and directors. A set of actors is the identifiers of the actors having roles in the movie, a set of directors is the identifiers of the directors, and a set of genres is the names of the genres of the movie. The set that movie similarity is measured from is the union of all these sets as well as the title of the movie and is denoted \textit{C}.
 
 
 \subsection{Min Hashing}
@@ -19,11 +19,42 @@ For the representation to be suitable for locality-sensitive hashing, each hash 
 
 \begin{table}[h]
 \begin{tabular}{l||l|l|l|l}
- & \(S_1\) & \(S_2\)  & \(S_3\)  &  \(S_4\) \\ \hline \hline
- \(h_1(C)\) &   714  & 55 & 10034 & 183 \\ \hline
-  \(h_2(C)\) &     2 & 5213 & 3921 & 5213 \\ \hline
- \(h_3(C)\) &     8322 & 377  & 475 & 15632
+& \(S_1\) & \(S_2\) & \(S_3\) & \(S_4\) \\ \hline \hline
+\(h_1(C)\) & 714 & 55 & 10034 & 183 \\ \hline
+\(h_2(C)\) & 2 & 5213 & 3921 & 5213 \\ \hline
+\(h_3(C)\) & 8322 & 377 & 475 & 15632
 \end{tabular}
 \centering
-\caption{In this example, the 714'th element of the permutation of the universal set for \(h_1(S)\) is the first element that the universal set and \(S_1\) had in common, starting from element 0.}
+\caption{In this example, the 715'th element with index 714 of the permutation of the universal set for \(h_1(S)\) is the first element that the universal set and \(S_1\) had in common, starting from element 0.}
+\end{table}
+
+\subsection{Locality-sensitive hashing}
+The purpose of locality-sensitive hashing is finding similar items, without examining each pair of items. The fundamental idea is to hash the signature of items several times, while only compare the items, of which the hash values collide. Item pairs, of which the hash value collide are called candidate pairs.\\ \\
+The similarity threshold, \(t\), is the minimum similarity coefficient that a pair of items must have to be considered similar. The aim of LSH is to identify each pair with similarity greater than or equal to \(t\) as a candidate pair.\\ \\
+Given a collection of signatures generated from the Min Hashing preprocessing step, each with size \(n\), the dimensions of the signature are grouped in \(b\) bands, each spanning \(r\) dimensions. The candidate pairs are found by hashing the subset of dimensions of each signature in each bands to buckets, such that two signatures with the same value in a band hashes to the same bucket. If a pair of item signatures hashes to the same bucket at least once, the items are considered candidate pairs. \\ \\
+When the candidate pairs are found, their similarity is measured to determine whether they are actual pairs with similarity greater than or equal to \(t\). This method produces false negatives, and false positives in the sense that for some candidate pairs \(j<t\).
+
+\subsubsection{Choosing the number of bands and rows}
+The probability that two items will hash to the same bucket is a function of the similarity of the pair, the number of bands and the number of rows. A pair of items will hash to the same bucket of a band if the row values are equal, and the probability that a pair of row values are equal is \(j\). Hence the probability that a pair of items do not hash to the same bucket of one band is \(1-j^r\). The probability that the pair does not hash to the same bucket across all bands is \((1-j^r)^b\), and finally \(1-(1-j^r)^b\) is the probability that the pair is identified as a candidate pair.\\ \\
+The function \(p(j) = 1-(1-j^r)^b\) is the connection between the probability that a pair is identified as a candidate pair and the similarity of the pair, \(j\). A higher number of bands clearly makes the probability larger that a pair is identified as a candidate pair, while a higher number of rows lowers this probability.\\ \\
+The settings for \(b\) and \(r\) depends on the application of LSH. If the threshold is high, setting \(b\) and \(r\) to yield a low probability, might be reasonable. If the probability that a pair satisfying the threshold is identified as a candidate pair should be low, \(b\) should be increased and \(r\) lowered.
+
+\begin{table}[h]
+\begin{tabular}{l||l|l|l|l}
+& \(S_1\) & \(S_2\) & \(S_3\) & \(S_4\) \\ \hline \hline
+\(h_1(C)\) & \cellcolor[HTML]{FD6864} & \cellcolor[HTML]{FD6864}
+ & \cellcolor[HTML]{FD6864} & \cellcolor[HTML]{FD6864} \\ \hline
+\(h_2(C)\) & \cellcolor[HTML]{FD6864} & \cellcolor[HTML]{FD6864}
+ & \cellcolor[HTML]{FD6864} & \cellcolor[HTML]{FD6864} \\ \hline
+\(h_3(C)\) & \cellcolor[HTML]{38FFF8} & \cellcolor[HTML]{38FFF8}
+ & \cellcolor[HTML]{38FFF8} & \cellcolor[HTML]{38FFF8} \\ \hline
+\(h_4(C)\) & \cellcolor[HTML]{38FFF8} & \cellcolor[HTML]{38FFF8}
+ & \cellcolor[HTML]{38FFF8} & \cellcolor[HTML]{38FFF8} \\ \hline
+\(h_5(C)\) & \cellcolor[HTML]{9AFF99} & \cellcolor[HTML]{9AFF99}
+ & \cellcolor[HTML]{9AFF99} & \cellcolor[HTML]{9AFF99} \\ \hline
+\(h_6(C)\) & \cellcolor[HTML]{9AFF99} & \cellcolor[HTML]{9AFF99}
+ & \cellcolor[HTML]{9AFF99} & \cellcolor[HTML]{9AFF99}
+\end{tabular}
+\centering
+\caption{In this example the 6 rows has been divided into 3 bands with two rows each. The concrete results of the hash functions has been omitted.}
 \end{table}
