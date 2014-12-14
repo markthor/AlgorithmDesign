@@ -92,6 +92,9 @@ public class SimilaritySearch {
 			//Directos
 			hashShingles.addAll(createAndHashDirectorShingles(m.getDirectors()));
 			
+			//Titles
+			hashShingles.add(m.getTitleLower().hashCode());
+			
 			//Set the movies shingles
 			m.setHashShingles(hashShingles);
 			
@@ -170,7 +173,7 @@ public class SimilaritySearch {
 		//Loop through all the bands first
 		for (int i = 0; i < b; i++) {
 			//Instantiate the bands hashmap
-			HashMap<Integer,List<Movie>> map = new HashMap<Integer,List<Movie>>();
+			HashMap<Integer,List<Movie>> band = new HashMap<Integer,List<Movie>>();
 			
 			//Loop through all movies and calculate their bucket
 			for (Movie m : movies) {
@@ -187,17 +190,17 @@ public class SimilaritySearch {
 				//Hash signature
 				int hash = sb.toString().hashCode();
 				
-				if(map.containsKey(hash)){ // Add signature to bucket
-					map.get(hash).add(m);
+				if(band.containsKey(hash)){ // Add signature to bucket
+					band.get(hash).add(m);
 				} else { // Create bucket and add signature
 					ArrayList<Movie> a = new ArrayList<Movie>();
 					a.add(m);
-					map.put(hash, a);
+					band.put(hash, a);
 				}
 			}
 			
 			//Add hashmap to list of hashmaps
-			bands.add(map);
+			bands.add(band);
 		}
 		
 		return findPairs(bands);
