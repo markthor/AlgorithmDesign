@@ -3,7 +3,7 @@
 \section{Introduction}
 
 \subsection{Git}
-The code is available on GitHub on the following link \url{https://github.com/markthor/AlgorithmDesign}
+The code for each algorithm studied in this report, is available on GitHub on the following link \url{https://github.com/markthor/AlgorithmDesign}.
 
 \subsection{Project aim}
 The project aims to discover interesting facts about actors, movies, etc. using algorithms, with appropriate space and time requirements, to process the data provided by IMDb\footnote{Internet Movie Database, \url{www.imdb.com}}.
@@ -19,14 +19,15 @@ Let the number of roles in \textit{S} be denoted \textit{m}, and the number of o
 	This report will focus on two different problems.
 \begin{itemize}
 	\item The first problem is finding roles that are heavy hitters, using a minimum amount of space. \\ %The representation of a role is defined as the percentage of times the role occurs among all roles of all movies. \\
-	Given the following dataset and an \(\alpha\)-value of 0.5: 
-	\marginpar{Introduction to example?}
+	An example of the problem and the corresponding solutions is given: \\
+	A movie consists of its name and a list of roles, e.g. Name\{\(\textrm{Role}_1 \textrm{, Role}_2 \textrm{, } \dots \textrm{, Role}_x\)\}. A heavy hitter is a role that appears more than \(\alpha \cdot n\) times, where \(n\) is the total number of roles in the dataset. \\
+	Given the following dataset
 	\begin{itemize}
 		\item Drive\{Driver, Cook, Doctor, Irene\}
 		\item Growing Rich\{Carmen, Driver, Mavis, Tim\}
 		\item Wild Hogs\{Dana, Docter, Cook, Selma\}
 	\end{itemize}
-	The heavy hitters of the roles are \(H\)\{Driver, Cook, Doctor\}
+	with \(n=12\) and \(\alpha=0.15\), the heavy hitters are \(H\)\{Driver, Cook, Doctor\}.
 	\item The second problem that the project aims to solve, is finding the Jaccard similarity of movie pairs, above a certain similarity threshold, using a minimum amount of time. The Jaccard similarity is based on a predefined subset of the movie attributes.
 	
 \end{itemize}
