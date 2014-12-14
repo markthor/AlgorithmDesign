@@ -39,15 +39,16 @@ public class MisraGriesLogic {
 			map.put(result[i], 0);
 		}
 		
-		int numberOfElements = 0;
+		//int numberOfElements = 0;
 
 		String s;
 		while ((s = stream.readLine()) != null) {
 			if (map.containsKey(s))
 				map.put(s, map.get(s) + 1);
-			numberOfElements++;
+			//numberOfElements++;
 		}
 
+		/*
 		int threshold = (int) Math.ceil(numberOfElements * percentage);
 		
 		Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
@@ -55,6 +56,7 @@ public class MisraGriesLogic {
 	    	Map.Entry<String, Integer> pair = it.next();
 	        if(pair.getValue() < threshold) it.remove();
 	    }
+	    */
 	    
 	    return getKeysOfMap(map);
 		
