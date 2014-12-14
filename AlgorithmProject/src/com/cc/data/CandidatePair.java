@@ -24,33 +24,26 @@ public class CandidatePair {
 		for (String g : f.getGenres()) {
 			if(s.getGenres().contains(g)){
 				shared++;
-				union++;
-			} else {
-				union += 2;
 			}
 		}
-
+		union += f.getGenres().size() + s.getGenres().size();
 		
 		//actors
 		for (int g : f.getActors()) {
 			if(s.getActors().contains(g)){
 				shared++;
-				union++;
-			} else {
-				union += 2;
 			}
 		}
+		union += f.getActors().size() + s.getActors().size();
 		
 		//directors
 		for (int g : f.getDirectors()) {
 			if(s.getDirectors().contains(g)){
 				shared++;
-				union++;
-			} else {
-				union += 2;
 			}
 		}
-		
+		union += f.getDirectors().size() + s.getDirectors().size();
+		union -= shared;
 		
 		return shared/union;
 	}

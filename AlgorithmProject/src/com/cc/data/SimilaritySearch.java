@@ -21,6 +21,7 @@ public class SimilaritySearch {
 	public static void main(String[] args) {
 		System.out.println("Start");
 		List<Movie> m = Controller.getMovies();
+		
 		HashSet<CandidatePair> r = run(m);
 		
 		System.out.println("There are " + r.size() + " movies with jaccard value above " + T);
