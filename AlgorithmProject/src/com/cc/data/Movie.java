@@ -10,12 +10,17 @@ public class Movie {
 	private Set<Integer> actors;
 	private Set<Integer> directors;
 	
+	private Set<Integer> hashShingles;
+	private int[] signature;
+	
 	public Movie(int id, String title) {
 		this.id = id;
 		this.title = title;
 		genres = new HashSet<String>();
 		actors = new HashSet<Integer>();
 		directors = new HashSet<Integer>();
+		
+		hashShingles = new HashSet<Integer>();
 	}
 	
 	public void addDirector(int id) {
@@ -30,6 +35,14 @@ public class Movie {
 		genres.add(genre);
 	}
 	
+	public void setHashShingles(HashSet<Integer> s){
+		hashShingles = s;
+	}
+	
+	public void setSignature(int[] s){
+		signature = s;
+	}
+	
 	public Set<Integer> getActors() {
 		return actors;
 	}
@@ -42,7 +55,19 @@ public class Movie {
 		return genres;
 	}
 	
+	public Set<Integer> getHashShingles(){
+		return hashShingles;
+	}
+	
+	public int[] getSignature(){
+		return signature;
+	}
+	
 	public String toString() {
 		return id + " " + title + "\n" + genres.toString() + "\n" + actors.toString() + "\n" + directors.toString();
+	}
+	
+	public String getTitle(){
+		return title;
 	}
 }

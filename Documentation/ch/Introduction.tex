@@ -19,7 +19,8 @@ Let the number of roles in \textit{S} be denoted \textit{m}, and the number of o
 	This report will focus on two different problems.
 \begin{itemize}
 	\item The first problem is finding roles that are heavy hitters, using a minimum amount of space. \\ %The representation of a role is defined as the percentage of times the role occurs among all roles of all movies. \\
-	Given the following dataset and an \(\alpha\)-value of 0.5:
+	Given the following dataset and an \(\alpha\)-value of 0.5: 
+	\marginpar{Introduction to example?}
 	\begin{itemize}
 		\item Drive\{Driver, Cook, Doctor, Irene\}
 		\item Growing Rich\{Carmen, Driver, Mavis, Tim\}
@@ -41,4 +42,4 @@ Let the number of roles in \textit{S} be denoted \textit{m}, and the number of o
 For the first problem, the space consumption is measured by the auxiliary space that the algorithm use. The data stream will consume some space, which is not a part of this measurement.
 
 \subsection{Problem setting}
-The data to be analysed is a dataset produced by IMDb. The data set is constructed to be loaded into a database and contains a lot of information about movies, actors, etc. However it is not all data which is relevant for the problem, so the dataset have been cleaned for all uneccesary data and a new datafile only containing roles from movies is created and used.
+However it is not all data which is relevant for the problems. The dataset have been cleaned for all unnecessary data and a new datafile only containing roles from movies is created and used for the first problem while the dataset for the second problem also contains the movies' actors, directors, titles and genres.
