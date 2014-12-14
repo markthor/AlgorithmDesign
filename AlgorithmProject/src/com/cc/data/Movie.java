@@ -66,4 +66,8 @@ public class Movie {
 	public String toString() {
 		return id + " " + title + "\n" + genres.toString() + "\n" + actors.toString() + "\n" + directors.toString();
 	}
+	
+	public String getTitle(){
+		return title;
+	}
 }
