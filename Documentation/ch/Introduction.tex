@@ -3,12 +3,13 @@
 \section{Introduction}
 
 \subsection{Git}
-The code is available on GitHub on the following link \url{https://github.com/markthor/AlgorithmDesign}
+The code for each algorithm studied in this report, is available on GitHub on the following link \url{https://github.com/markthor/AlgorithmDesign}.
 
 \subsection{Project aim}
 The project aims to discover interesting facts about actors, movies, etc. using algorithms, with appropriate space and time requirements, to process the data provided by IMDb\footnote{Internet Movie Database, \url{www.imdb.com}}.
 
 \subsection{Terminology and notation}
+\marginpar{move this fucker somewhere else}
 A role is a string that represents an actor’s role in a movie. The data stream, denoted \textit{S}, contains roles, with some of them being identical. The set of most occurring roles are called heavy hitters, denoted \textit{H} and are defined by \(\alpha\), the fraction of \textit{S}, that a role constitutes to be in \textit{H}.
 Let the number of roles in \textit{S} be denoted \textit{m}, and the number of occurrences of a role in \textit{S} denoted \textit{c} then the role is in \textit{H} if and only if 
 \begin{math}
@@ -19,14 +20,9 @@ Let the number of roles in \textit{S} be denoted \textit{m}, and the number of o
 	This report will focus on two different problems.
 \begin{itemize}
 	\item The first problem is finding roles that are heavy hitters, using a minimum amount of space. \\ %The representation of a role is defined as the percentage of times the role occurs among all roles of all movies. \\
-	Given the following dataset and an \(\alpha\)-value of 0.5: 
-	\marginpar{Introduction to example?}
-	\begin{itemize}
-		\item Drive\{Driver, Cook, Doctor, Irene\}
-		\item Growing Rich\{Carmen, Driver, Mavis, Tim\}
-		\item Wild Hogs\{Dana, Docter, Cook, Selma\}
-	\end{itemize}
-	The heavy hitters of the roles are \(H\)\{Driver, Cook, Doctor\}
+	An example of the problem and the corresponding solutions is given: \\
+	The stream consists of \(m\) roles, e.g. Name\{\(\textrm{Role}_1 \textrm{, Role}_2 \textrm{, } \dots \textrm{, Role}_x\)\}. A heavy hitter is a role that appears more than \(\alpha \cdot m\) times. \\
+	Given the dataset \(m = \{\)Driver, Cook, Doctor, Irene, Carmen, Driver, Mavis, Tim, Dana, Docter, Cook, Selma\(\}\), with \(n=12\) and \(\alpha=0.15\), the heavy hitters are \(H\)\{Driver, Cook, Doctor\}.
 	\item The second problem that the project aims to solve, is finding the Jaccard similarity of movie pairs, above a certain similarity threshold, using a minimum amount of time. The Jaccard similarity is based on a predefined subset of the movie attributes.
 	
 \end{itemize}
@@ -42,4 +38,4 @@ Let the number of roles in \textit{S} be denoted \textit{m}, and the number of o
 For the first problem, the space consumption is measured by the auxiliary space that the algorithm use. The data stream will consume some space, which is not a part of this measurement.
 
 \subsection{Problem setting}
-However it is not all data which is relevant for the problems. The dataset have been cleaned for all unnecessary data and a new datafile only containing roles from movies is created and used for the first problem while the dataset for the second problem also contains the movies' actors, directors, titles and genres.
+Not all provided data are relevant for the problems. The dataset have been cleaned for all unnecessary data and a new datafile only containing roles from movies is created and used for the first problem while the dataset for the second problem also contains the movies' actors, directors, titles and genres.
