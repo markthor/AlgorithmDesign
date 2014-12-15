@@ -61,3 +61,7 @@
 \contentsline {subsection}{\numberline {4.3}Applications}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Conclusion}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Graphs}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}Test runs of similarity search}{17}
