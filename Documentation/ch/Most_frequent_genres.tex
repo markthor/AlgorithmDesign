@@ -1,24 +1,23 @@
 % !TEX root = ../preamble.tex
 
-\section{Finding the most frequently occurring genres}
-In this section, the first problem presented in section~\ref{sub:problem} is discussed, as well as different approaches to solving it.\marginpar{what problem? the problem discussed in ...}
-\cite{reservoir}
+\section{Finding most occurring roles}
+In this section, the first problem presented in section~\ref{sub:problem} is discussed, as well as different approaches to solving it.
 
 \subsection{Terminology and notation}
-\marginpar{move this fucker somewhere else}
 A role is a string that represents an actor’s role in a movie. The data stream, denoted \textit{S}, contains roles, with some of them being identical. The set of most occurring roles are called heavy hitters, denoted \textit{H} and are defined by \(\alpha\), the fraction of \textit{S}, that a role constitutes to be in \textit{H}.
-Let the number of roles in \textit{S} be denoted \textit{m}, and the number of occurrences of a role in \textit{S} denoted \textit{c} then the role is in \textit{H} if and only if \(\alpha \le \frac{c}{m}\). The threshold of the reservoir sampling algorithm is denoted \textit{t}.
+Let the number of roles in \textit{S} be denoted \textit{m}, and the number of occurrences of a role in \textit{S} denoted \textit{c} then the role is in \textit{H} if and only if \(\alpha \le \frac{c}{m}\). %The threshold of the reservoir sampling algorithm is denoted \textit{t}.
 
 \subsection{Finding heavy hitters}
-Different algorithms solves the problem of finding the heavy hitters \textit{H} in a data set \textit{S}. A naïve approach is to store all distinct roles in the data set, and their respective count. A space concerned approach to finding the heavy hitters, as described in the section describing the Misra Gries algorithm, can reduce the space consumption.\marginpar{Reservoir sampling as well}
+Different algorithms solves the problem of finding the heavy hitters in a data set. A naïve approach is to store all distinct roles in the data set, and their respective count. A space concerned approach to finding the heavy hitters, for instance using Reservoir sampling, as described in section~\ref{sub:reservoir}, or the Misra Gries algorithm, as described in section~\ref{sub:misragries}, can reduce the space consumption.
 
 \subsection{Naïve solution}
-The naïve solution stores all distinct roles in order to find the roles with a frequency above the threshold. The algorithm contains a map with every distinct role as key, and their respective count as the corresponding value. The time complexity is O(m) while the worst case space consumptions is O(m).\marginpar{Ninh was /care with time complexity}
+The naïve solution stores all distinct roles in order to find the heavy hitters. The algorithm contains a map with every distinct role as key, and their respective count as the corresponding value. The time complexity is O(m) while the worst case space consumptions is O(m).
 
 \subsection{Reservoir Sampling}
-Reservoir sampling is an algorithm that chooses \(k\) random elements from a dataset. It has a reservoir, \(Res\), of size \(k\) and a set of genres returned by the algorithm, \(R\). It holds that \(R \in Res\). Reservoir sampling can report some genres as being a heavy hitter even though it is not, i.e. the following might hold \(\exists x \left(x \in R \land x \notin H \right)\). Futhermore some heavy hitters are not included in the set of elements returned by the algorithm, i.e the following might hold \(\exists x \left(x \in H \land x \notin R \right)\).\\
+\label{sub:reservoir}
+Reservoir sampling is an algorithm that chooses \(k\) random elements from a dataset. It has a reservoir, \(Res\), of size \(k\) and a set of genres returned by the algorithm, \(R\), as begin heavy hitters. It holds that \(R \in Res\). Reservoir sampling can report some genres as being a heavy hitter even though it is not, i.e. the following might hold \(\exists x \left(x \in R \land x \notin H \right)\). Futhermore some heavy hitters are not included in the set of elements returned by the algorithm, i.e the following might hold \(\exists x \left(x \in H \land x \notin R \right)\).\\
 
-Each item, \(a_i\), in \(S\) must have an equal chance of ending up in \(Res\). This is achievable by putting items \(a_1 \dots a_k\) in the reservoir. Every item after \(a_k\) has chance equal to \(\frac{1}{i}\) to be inserted in the reservoir at a random location. By doing this every item has a chance of \(\frac{1}{m}\) to be in \(Res\).
+Each item, \(a_i\), in \(S\) must have an equal chance of ending up in \(Res\). This is achievable by putting items \(a_1,\ \dots,\ a_k\) in the reservoir. Every item after \(a_k\) has chance equal to \(\frac{1}{i}\) to be inserted in the reservoir at a random location. By doing this every item has a chance of \(\frac{1}{m}\) to be in \(Res\).
 
 Equation~\ref{eq:one_over_m} proofs that some \(a_\ell\), \(1 \le \ell \le m\), has a chance of \(\frac{1}{m}\) to be in \(Res\), if the size of the reservoir is exactly one.
 \begin{equation}
@@ -58,6 +57,7 @@ Every item is only looked at once making the time complexity \(O(m)\).
 % and some heavy hitters might not  \textit{R}, is in \textit{H}, such that \(R \subseteq H\), but not necessarily \(H \subseteq R\). Therefore the algorithm might report false negatives.
 
 \subsection{Misra Gries}
+\label{sub:misragries}
 The Misra Gries algorithm finds heavy hitters in a data stream. It maintains a map with up to \textit{k} entries, with keys being data element identifiers. If the set of element keys in the map is denoted \textit{K}, then \(H \subseteq K\), when the algorithm has finished. The size of the map is \(k = \frac{1}{\alpha} + 1\), meaning that the fraction an element has to constitute of \textit{S} to be in \textit{H} has an inverse relation to \textit{k}.
 For each element in the data stream, the map is updated. If the key of the element already exists in the map, the value is incremented by 1. Else if the size of the map is less than \textit{k}, then the element is added to the map, with a value of 1. If the element does not exist in the map and the size of the map is \textit{k}, then the value of each key is decremented by 1 and keys with value zero is removed. This decrement procedure is repeated until the size of the map is less than \textit{k} such that the element can be added to the map.
 
