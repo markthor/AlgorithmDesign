@@ -16,7 +16,6 @@ public class SimilaritySearch {
 	
 	private static final int NUMBER_OF_PERMUTATIONS = 16;
 	private static final double T = 0.6;
-	//private static final double T = 0.0;
 	
 	public static void main(String[] args) {
 		System.out.println("Start");
