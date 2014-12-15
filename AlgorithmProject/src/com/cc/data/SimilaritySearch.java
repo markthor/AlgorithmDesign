@@ -83,6 +83,7 @@ public class SimilaritySearch {
 		for (Movie m : movies) {
 			HashSet<Integer> hashShingles = new HashSet<Integer>();
 			
+			//Add shingles
 			//Genre
 			hashShingles.addAll(createAndHashGenresShingles(m.getGenres()));
 			
@@ -164,16 +165,13 @@ public class SimilaritySearch {
 		int r = 2;
 		assert(b + r == NUMBER_OF_PERMUTATIONS);
 		
-		//List with all hashmaps for the bands
-		List<Map<Integer,List<Movie>>> bands = new ArrayList<Map<Integer,List<Movie>>>();
+		//The hashmap holding the buckets
+		Map<Integer,List<Movie>> buckets = new HashMap<Integer, List<Movie>>();
 		
 		// Stringbuilder is being reused for performance
 		StringBuilder sb = new StringBuilder();
-		
 		//Loop through all the bands first
 		for (int i = 0; i < b; i++) {
-			//Instantiate the bands hashmap
-			HashMap<Integer,List<Movie>> band = new HashMap<Integer,List<Movie>>();
 			
 			//Loop through all movies and calculate their bucket
 			for (Movie m : movies) {
@@ -190,37 +188,28 @@ public class SimilaritySearch {
 				//Hash signature
 				int hash = sb.toString().hashCode();
 				
-				if(band.containsKey(hash)){ // Add signature to bucket
-					band.get(hash).add(m);
+				if(buckets.containsKey(hash)){ // Add signature to bucket
+					buckets.get(hash).add(m);
 				} else { // Create bucket and add signature
 					ArrayList<Movie> a = new ArrayList<Movie>();
 					a.add(m);
-					band.put(hash, a);
+					buckets.put(hash, a);
 				}
 			}
-			
-			//Add hashmap to list of hashmaps
-			bands.add(band);
 		}
-		
-		return findPairs(bands);
+		return findPairs(buckets);
 	}
 
-	private static HashSet<CandidatePair> findPairs(List<Map<Integer, List<Movie>>> bands) {
+	private static HashSet<CandidatePair> findPairs(Map<Integer, List<Movie>> buckets) {
 		HashSet<CandidatePair> cp = new HashSet<CandidatePair>();
 		
-		//Loop through all bands
-		for (Map<Integer, List<Movie>> m : bands) {
-			
-			//Loop through all buckets in the band
-			for (List<Movie> l : m.values()) {
-				
-				//Create candidate pairs
-				for (int i = 0; i < l.size() - 1; i++) {
-					for (int j = 1; j < l.size(); j++) {
-						if(l.get(i) != l.get(j)){
-							cp.add(new CandidatePair(l.get(i), l.get(j)));
-						}
+		//Loop through all buckets
+		for (List<Movie> l : buckets.values()) {
+			//Create candidate pairs
+			for (int i = 0; i < l.size() - 1; i++) {
+				for (int j = 1; j < l.size(); j++) {
+					if(l.get(i) != l.get(j)){
+						cp.add(new CandidatePair(l.get(i), l.get(j)));
 					}
 				}
 			}

@@ -42,6 +42,10 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[bottom]{footmisc} % Stick footnote at bottom of page
 
+%%%% Bibliography
+\usepackage[style=alphabetic,backend=bibtex]{biblatex}
+\addbibresource{ch/Bibliography.bib}
+
 %%% Custom sectioning
 \usepackage{sectsty}
 %\allsectionsfont{\centering \normalfont\scshape}
@@ -104,8 +108,9 @@
 \include{ch/Most_similar_movies}
 \include{ch/Implementation}
 \endgroup
-\include{ch/math-test}
-\include{ch/template}
+
+\clearpage % Force bibliography on new page
+\printbibliography
 
 %%% End document
 \end{document}
