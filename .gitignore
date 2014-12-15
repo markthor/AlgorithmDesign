@@ -22,3 +22,8 @@ data/data_files
 *.aux
 *.pdf
 *.synctex.gz
+
+# Bibtex
+.bbl
+.blg
+.run.xml
