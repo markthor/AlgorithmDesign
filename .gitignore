@@ -24,6 +24,6 @@ data/data_files
 *.synctex.gz
 
 # Bibtex
-.bbl
-.blg
-.run.xml
+*.bbl
+*.blg
+*.run.xml
