@@ -1,10 +1,11 @@
 % !TEX root = ../preamble.tex
 \section{Finding similar movies}
-	\begin{figure}[H]
+This section describes and discusses the theoretical foundation of the solution to the second problem. As seen on figure ~\ref{fig:search_diagram}, the process of finding similar movies consists of several steps. This section covers Min Hashing and locality sensitive hashing.
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=250px]{img/Similaritysearchdiagram.png}
 	\caption{The steps in similarity search} 
-	\label{fig:p_graph}
+	\label{fig:search_diagram}
 \end{figure}
 \subsection{Jaccard similarity}
 Movie similarity is defined as Jaccard similarity of sets of a subset of movie attributes. Given two sets \textit{A} and \textit{B} the Jaccard similarity coefficient, \textit{j}, is defined as \(j = \frac{|A \cap B|}{|A \cup B|}\). \\ \\
@@ -60,7 +61,7 @@ Given a collection of signatures generated from the Min Hashing preprocessing st
 When the candidate pairs are found, their similarity is measured to determine whether they are actual pairs with similarity greater than or equal to \(t\). This method produces false negatives, and false positives in the sense that for some candidate pairs \(j<t\).
 
 \subsubsection{Choosing the number of bands and rows}
-The probability that two items will hash to the same bucket is a function of the similarity of the pair, the number of bands and the number of rows. A pair of items will hash to the same bucket of a band if the row values are equal, and the probability that a pair of row values are equal is \(j\). Hence the probability that a pair of items do not hash to the same bucket of one band is \(1-j^r\). The probability that the pair does not hash to the same bucket across all bands is \((1-j^r)^b\), and finally \(1-(1-j^r)^b\) is the probability that the pair is identified as a candidate pair.\\ \\
+The probability that two items will hash to the same bucket is a function of the similarity of the pair, the number of bands and the number of rows. A pair of items will hash to the same bucket of a band if the row values are equal, and the probability that a pair of row values are equal is \(j\). Hence the probability that a pair of items do not hash to the same bucket of one band is \(1-j^r\). The probability that the pair does not hash to the same bucket across all bands is \((1-j^r)^b\), and finally \(1-(1-j^r)^b\) is the probability that the pair is identified as a candidate pair.\cite{lsh}\\ \\
 The function \(p(j) = 1-(1-j^r)^b\) is the connection between the probability that a pair is identified as a candidate pair and the similarity of the pair, \(j\). A higher number of bands clearly makes the probability larger that a pair is identified as a candidate pair, while a higher number of rows lowers this probability.\\ \\
 \begin{figure}[H]
 	\centering
@@ -68,7 +69,7 @@ The function \(p(j) = 1-(1-j^r)^b\) is the connection between the probability th
 	\caption{The s-curve of \(p(j)\) with \(t = 0.6\), \(r = 5\) and \(b =20\). A pair with 0.6 similarity coefficient has a probability of 80,190\% of being identified as a candidate pair.} 
 	\label{fig:p_graph}
 \end{figure}
-The settings for \(b\) and \(r\) depends on the application of LSH. If the threshold is high, setting \(b\) and \(r\) to yield a low probability, might be reasonable. If the probability that a pair satisfying the threshold is identified as a candidate pair should be high, \(b\) should be increased and \(r\) lowered. Increasing b increases the fraction of false positives out of all \(n\) pairs, \(f_p\), and increasing \(r\) increases the fraction of false negatives, \(f_n\). It should be avoided choosing too low values of \(b\) and \(r\). It might seem reasonable because of the increase in performance of the initial locality sensitive hashing, but it yield far too many false positives and false negatives, resulting in worse performance, as seen at figure ~\ref{fig:false_graph_low}.
+The settings for \(b\) and \(r\) depends on the application of LSH. If the threshold is high, setting \(b\) and \(r\) to yield a low probability, might be reasonable. If the probability that a pair satisfying the threshold is identified as a candidate pair should be high, \(b\) should be increased and \(r\) lowered. Increasing b increases the fraction of false positives out of all \(n\) pairs, \(f_p\), and increasing \(r\) increases the fraction of false negatives, \(f_n\). It should be avoided choosing too low values of \(b\) and \(r\). It might seem reasonable because of the increase in performance of the initial locality sensitive hashing, but it yield far too many false positives and false negatives, resulting in worse performance, as seen at figure ~\ref{fig:p_graph_low}.
 
 \begin{figure}[H]
 	\centering
@@ -92,8 +93,7 @@ The continuous uniform distribution assumption makes the similarity \(j\) direct
 \end{figure}
 
 Figure ~\ref{fig:false_graph} visualises the connection between \(b\), \(r\), \(f_n\) and \(f_p\). The connection is complicated, but it is apparent that the sum of \(f_n\) and \(f_p\) is reduced when \(b\) and \(r\) are increased. It is relevant to note that the uniform distribution assumption does make the fraction of false negatives seem larger and the number of false positives seem smaller than it is in a scenario where for a random pair \(Pr[j<0.5] > Pr[j>0.5]\), which is much more realistic.
-\\
-\\
+
 \subsubsection{Time complexity of locality-sensitive hashing}
 The time complexity of similarity search can be split into two parts, the preprocessing and the actual time to run a query after the preprocessing.\\
 The preprocessing step hashes all N input points into L hashtables. This requires \(O(NLkt)\) time, as every input, must be put into all \(L\) hashtables and it takes \(kt\) time to do so, with \(t\) being the time to hash an input. The query step is 

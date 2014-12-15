@@ -11,11 +11,21 @@ There are multiple ways to handle the data that needs to be processed.
 One approach is to load all the data into the RAM. This technique is very demanding on the RAM, since everything is stored. Storing everything in the RAM has some clear advantages e.g. being able to go back and forth in the data or reading the same subset of the data multiple times. However if the size of the data exceeds the amount of RAM available, one might experience severe performance implications, due to e.g. memory swapping.
 Some datasets have a size which makes it impractical, sometimes even impossible, to store them in the RAM. This constraint leads to another approach, which is to stream the data. Streaming the data has advantages as well as disadvantages. Only a fraction of the whole data is stored in the RAM, imposing no extraordinary demand to the size of the available RAM. Only storing part of the data makes it cumbersome, and to some extent impossible, to go back and forth in the data.
 
+\subsubsection{Movie wrangling}
+The data obtained from imdb has been filtered to fit the problem. The movie data considered when comparing movies are the following:
+\begin{itemize}
+\item Title
+\item Director ids
+\item Actor ids
+\item Genres as strings
+\end{itemize}
+The movies are loaded in RAM and the attributes are stored in sets. The sets that is used as an input to jaccard similarity coefficient calculation is the union of all the sets. Movies with less than \(x\) elements in the union set is not used as input for similarity sensitive hashing.
+
 \subsection{Practical space consumption}
 The following logarithmic graph is the number of map entries used by Misra Gries, reservoir sampling and the naive solution based on the concrete data set. The vertical axis is space consumption and the horizontal axis is \(\alpha\). Only the naïve solution is dependent on the size of the concrete example and not on \(\alpha\). The reservoir sampling algorithm is linear dependent on the threshold.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=350px]{img/streamingMemoryGraph.eps}
+	\includegraphics[width=290px]{img/streamingMemoryGraph.eps}
 	\caption{Space consumption}
 	\label{fig:space_consumption}
 \end{figure}
