@@ -1,7 +1,7 @@
 % !TEX root = ../preamble.tex
 
 \section{Finding the most frequently occurring roles}
-In this section, the first problem presented in section~\ref{sub:problem} is discussed, as well as different approaches to solving it.\cite{reservoir}
+In this section, the first problem presented in section~\ref{sub:problem} is discussed, as well as different approaches to solving it.
 
 \subsection{Terminology and notation}
 A role is a string that represents an actor’s role in a movie. The data stream, denoted \textit{S}, contains roles, with some of them being identical. The set of most occurring roles are called heavy hitters, denoted \textit{H} and are defined by \(\alpha\), the fraction of \textit{S}, that a role constitutes to be in \textit{H}.
@@ -44,7 +44,7 @@ Generally a reservoir size of \(k > 1\), is desirable in order to get a more pre
 
 As seen in equation~\ref{eq:one_over_m2} every subset of \(S\) with size two has an equal chance of ending up in \(Res\). It follows that every subset of \(S\) with size \(k\) has an equal chance of being the final \(Res\). \\
 
-For the algorithm to be classified as a streaming algorithm, its space consumption must be sublinear in the length of the stream. It achieves this by having the size of the reservoir fixed. To find the optimal size of the reservoir two variables are considered, \(\epsilon\) and \(\delta\). \(\epsilon\) is the error margin that one wants to achieve with probability equal to \(1 - \delta\). Considering the algorithm estimates heavy hitters it is relevant to determine the probability that the estimate is within the error margin one allows. The size of the reservoir is dependent on these two variables. It can be calculated using the formula \(k=O\left(1/\epsilon^2\log\left(1/\delta\right)\right)\). 
+For the algorithm to be classified as a streaming algorithm, its space consumption must be sublinear in the length of the stream. It achieves this by having the size of the reservoir fixed. To find the optimal size of the reservoir two variables are considered, \(\epsilon\) and \(\delta\). \(\epsilon\) is the error margin that one wants to achieve with probability equal to \(1 - \delta\). Considering the algorithm estimates heavy hitters it is relevant to determine the probability that the estimate is within the error margin one allows. The size of the reservoir is dependent on these two variables. It can be calculated using the formula \(k=O\left(1/\epsilon^2\log\left(1/\delta\right)\right)\).\cite{reservoir}
 
 %The algorithm is relevant due to its time complexity and space consumption. The time complexity is \(O(n)\), and the space consumption is \(O(\frac{t}{\alpha})\).
 %As with the naïve solution, the algorithm only require a single pass through initial the dataset. After the first pass through, the algorithm counts the frequency of each item in the reservoir and reports the element if the frequency is equal to or exceeds the given threshold.
