@@ -27,4 +27,12 @@ It is also used in combination with the "k-nearest neighbors algorithm"(also kno
 \\
 bibliography andreas: \\
 http://web.iitd.ac.in/~sumeet/Slaney2008-LSHTutorial.pdf \\
-http://www.mit.edu/~andoni/LSH/ -> http://mags.acm.org/communications/200801/, Survey of LSH in CACM (2008): "Near-Optimal Hashing Algorithms for Approximate Nearest Neighbor in High Dimensions" (by Alexandr Andoni and Piotr Indyk). Communications of the ACM, vol. 51, no. 1, 2008, pp. 117-122. 
+http://www.mit.edu/~andoni/LSH/ -> http://mags.acm.org/communications/200801/, Survey of LSH in CACM (2008): "Near-Optimal Hashing Algorithms for Approximate Nearest Neighbor in High Dimensions" (by Alexandr Andoni and Piotr Indyk). Communications of the ACM, vol. 51, no. 1, 2008, pp. 117-122.
+
+\subsection{Shingling}
+VED IKKE LIGE HVOR AFSNITTET SKAL VÆRE, nok oppe før 3.1 eller 3.2\\
+The purpose of the shingling step... what is a token? which tokens are being used in this problem?
+
+\subsection{Choosing the length, k(?) of shingles}
+VED IKKE LIGE HVOR AFSNITTET SKAL VÆRE, under implementation eller under Shingling afsnittet\\
+The length of shingles impact both the space consumption and the running time of the algorithm. The lower the number, the higher possible amount of uniquie shingles. Also, with a k value above 1, the order of the tokens become relevant, which is imporant in a number of cases, eg. when comparing documents. If k is 1, then all words in all documents are theoretically compared, and a lot of documents will have a lot in common, wiht basic words like "the" and "and", but with a k value of 10, only documents with 10 words in the same order will be considered as similair, thus giving more relevant/true results. In this case, with comparing movies, order is completely irrelevant and all tokens should be compared to each other. This means that k=1 is the only relevant value for this problem.
