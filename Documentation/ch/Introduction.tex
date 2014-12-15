@@ -3,14 +3,14 @@
 \section{Introduction}
 
 \subsection{Project aim}
-The project aims to discover interesting facts about actors, movies, etc. using algorithms, with appropriate space and time requirements, to process the data provided by IMDb\footnote{Internet Movie Database, \url{www.imdb.com}}.
+The project has two aims. The first is to discover interesting facts about actors, movies, etc. The second is finding similar movies. Both are explored using algorithms, with appropriate space and time requirements. The data processed in the project is prrovided by IMDb\footnote{Internet Movie Database, \url{www.imdb.com}}.
 
 \subsection{Problem statement}
 \label{sub:problem}
-	This report will focus on two different problems.
+	The two aims of the report results in two different problems.
 \begin{itemize}
 	\item The first problem is finding roles that are heavy hitters from an input stream, using a minimum amount of space. A stream consists of \(m\) roles, e.g. \(S=\left\{\textrm{Role}_1 \textrm{, Role}_2 \textrm{, } \dots \textrm{, Role}_m\right\}\). A heavy hitter is a role that appears more than \(\alpha \cdot m\) times.\\
-	An example of the problem and the corresponding solution is given: \\
+	An example of the problem and the corresponding solution follows: \\
 	Given the dataset \(S = \{\)Driver, Cook, Doctor, Irene, Carmen, Driver, Mavis, Tim, Dana, Docter, Cook, Selma\(\}\), with \(n=12\) and \(\alpha=0.15\), the heavy hitters are \(H\)\{Driver, Cook, Doctor\}.
 	\item The second problem that the project aims to solve, is finding the Jaccard similarity of movie pairs, above a certain similarity threshold, using a minimum amount of time. The Jaccard similarity is based on a predefined subset of the movie attributes, in our case title, genres, directors and actors, and is calculated using the following formula \(j = \frac{|A \cap B|}{|A \cup B|}\). \\
 	The dataset \(S = \{\) \\
@@ -23,21 +23,15 @@ The project aims to discover interesting facts about actors, movies, etc. using 
 
 \subsection{Algorithmic solution}
 \begin{itemize}
-	%\item The solution to the first problem will be based on the Misra Gries streaming algorithm. The problem is interpreted as a stream by viewing each genre of a single movie as a stream object.
 	\item Multiple solutions to the first problem will be explored. A naïve solution, Misra Gries algorithm and Reservoir sampling will be evaluated in regards to correctness and space consumption.
 	\item The solution to the second problem is calculated using locality sensitive hashing with minhashing of shingles relevant to movie data.
 \end{itemize}
 
-\subsection{Git}
-The code for each algorithm studied in this report, is available on GitHub on the following link \url{https://github.com/markthor/AlgorithmDesign}.
-
 \subsection{Problem scope}
-For the first problem, the space consumption is measured by the auxiliary space that the algorithm use. The data stream will consume some space, which is not a part of this measurement.
+For the first problem, the space consumption is measured by the auxiliary space that the algorithm use. The data stream will consume some space, which is not a part of this measurement. For the second problem, the time it takes to wrangle the data is disregarded, and only the time complexity of the actual algorithm is considered.
 
 \subsection{Problem setting}
 Not all provided data are relevant for the problems. The dataset have been cleaned for all unnecessary data and a new datafile only containing roles from movies is created and used for the first problem while the dataset for the second problem also contains the movies' actors, directors, titles and genres.
 
-\subsection{Terminology and notation}
-\marginpar{move this fucker somewhere else}
-A role is a string that represents an actor’s role in a movie. The data stream, denoted \textit{S}, contains roles, with some of them being identical. The set of most occurring roles are called heavy hitters, denoted \textit{H} and are defined by \(\alpha\), the fraction of \textit{S}, that a role constitutes to be in \textit{H}.
-Let the number of roles in \textit{S} be denoted \textit{m}, and the number of occurrences of a role in \textit{S} denoted \textit{c} then the role is in \textit{H} if and only if \(\alpha \le \frac{c}{m}\). The threshold of the reservoir sampling algorithm is denoted \textit{t}.
+\subsection{Code availability}
+The code for each algorithm studied in this report, is available on GitHub on the following link \url{https://github.com/markthor/AlgorithmDesign}.

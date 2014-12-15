@@ -4,6 +4,11 @@
 In this section, the first problem presented in section~\ref{sub:problem} is discussed, as well as different approaches to solving it.\marginpar{what problem? the problem discussed in ...}
 \cite{reservoir}
 
+\subsection{Terminology and notation}
+\marginpar{move this fucker somewhere else}
+A role is a string that represents an actor’s role in a movie. The data stream, denoted \textit{S}, contains roles, with some of them being identical. The set of most occurring roles are called heavy hitters, denoted \textit{H} and are defined by \(\alpha\), the fraction of \textit{S}, that a role constitutes to be in \textit{H}.
+Let the number of roles in \textit{S} be denoted \textit{m}, and the number of occurrences of a role in \textit{S} denoted \textit{c} then the role is in \textit{H} if and only if \(\alpha \le \frac{c}{m}\). The threshold of the reservoir sampling algorithm is denoted \textit{t}.
+
 \subsection{Finding heavy hitters}
 Different algorithms solves the problem of finding the heavy hitters \textit{H} in a data set \textit{S}. A naïve approach is to store all distinct roles in the data set, and their respective count. A space concerned approach to finding the heavy hitters, as described in the section describing the Misra Gries algorithm, can reduce the space consumption.\marginpar{Reservoir sampling as well}
 
@@ -67,9 +72,6 @@ Hence the upper bound on the actual value of occurences \(c\).
 \[c \leq c_m+\frac{m}{k}\]
 A lower bound is obviously.
 \[c \geq c_m\]
-
-\subsubsection{Additional filtering}
-DELETED SECTION, KEPT FOR REMEMBERING\marginpar{Den skal gerne rettes til at være single pass. False positives og false negatives er tilladte. Der skal beskrives sandsynligeheder for korrektheden}
 
 \subsubsection{Space consumption}
 The auxiliary space used by Misra Gries is \(O\left(\frac{1}{\alpha}\right)\), but as \(\alpha\) is a constant in many applications, this is regarded as constant space consumption.\marginpar{Hvornår er alpha ikke en konstant}
