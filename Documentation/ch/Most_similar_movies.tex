@@ -64,7 +64,6 @@ When the candidate pairs are found, their similarity is measured to determine wh
 The probability that two items will hash to the same bucket is a function of the similarity of the pair, the number of bands and the number of rows. A pair of items will hash to the same bucket of a band if the row values are equal, and the probability that a pair of row values are equal is \(j\). Hence the probability that a pair of items do not hash to the same bucket of one band is \(1-j^r\). The probability that the pair does not hash to the same bucket across all bands is \((1-j^r)^b\), and finally \(1-(1-j^r)^b\) is the probability that the pair is identified as a candidate pair.\cite{lsh}\\ \\
 The function \(p(j) = 1-(1-j^r)^b\) is the connection between the probability that a pair is identified as a candidate pair and the similarity of the pair, \(j\). A higher number of bands clearly makes the probability larger that a pair is identified as a candidate pair, while a higher number of rows lowers this probability.\\ \\
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=250px]{img/pGraph.eps}
 	\caption{The s-curve of \(p(j)\) with \(t = 0.6\), \(r = 5\) and \(b =20\). A pair with 0.6 similarity coefficient has a probability of 80,190\% of being identified as a candidate pair.} 
 	\label{fig:p_graph}
@@ -72,7 +71,6 @@ The function \(p(j) = 1-(1-j^r)^b\) is the connection between the probability th
 The settings for \(b\) and \(r\) depends on the application of LSH. If the threshold is high, setting \(b\) and \(r\) to yield a low probability, might be reasonable. If the probability that a pair satisfying the threshold is identified as a candidate pair should be high, \(b\) should be increased and \(r\) lowered. Increasing b increases the fraction of false positives out of all \(n\) pairs, \(f_p\), and increasing \(r\) increases the fraction of false negatives, \(f_n\). It should be avoided choosing too low values of \(b\) and \(r\). It might seem reasonable because of the increase in performance of the initial locality sensitive hashing, but it yield far too many false positives and false negatives, resulting in worse performance, as seen at figure ~\ref{fig:p_graph_low}.
 
 \begin{figure}[H]
-	\centering
 	\includegraphics[width=250px]{img/pGraphLow.eps}
 	\caption{The s-curve of \(p(j)\) with \(t = 0.6\), \(r = 2\) and \(b =4\). A pair with 0.6 similarity coefficient has a probability of 83,223\% of being identified as a candidate pair. The number of false positives identified with these values of \(b\) and \(r\) results in sub-optimal performance.} 
 	\label{fig:p_graph_low}
@@ -88,7 +86,7 @@ The continuous uniform distribution assumption makes the similarity \(j\) direct
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=290px]{img/falseGraph.png}
-	\caption{The fraction of false positives or false negatives of all pairs, as a function of the number of rows and the number of bands with \(t=0.6\).}
+	\caption{The fraction of false positives or false negatives of all pairs, as a function of the number of rows and the number of bands with \(t=0.6\). The graph resulting from choosing \(b = 100\) and \(r = 10\), which seems desirable from the 3d graph is included in section \ref{sec:graph} of the appendix.}
 	\label{fig:false_graph}
 \end{figure}
 
