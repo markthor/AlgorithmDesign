@@ -46,10 +46,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.3.3}Space consumption}{12}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Shingling}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.4.1}Choosing the length, w, of shingles}{12}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Implementation}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Data cleaning}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Movie wrangling}{12}
+\contentsline {subsubsection}{\numberline {4.1.1}Movie wrangling}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Practical space consumption}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Applications}{14}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{15}
