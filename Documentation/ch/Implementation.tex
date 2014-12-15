@@ -1,18 +1,11 @@
 % !TEX root = ../preamble.tex
-
 \section{Implementation}
 
-\subsection{String alignment}
-This section describes how roles are being aligned in the dataset in order to get more accurate results.\\
-The data containing the roles and the string describing the actual role contains superfluous information, e.g. the id of the actor, the id of the movie. The string describing the role can for instance contain information defining what specific policeman it was. In order to generalise the roles such information is removed, e.g. there is no difference between policeman \#1 and policeman \#2 in the cleaned dataset. Additionally unspecified roles are deleted. As an example multiple people has had a role playing themselves. Such a role is defined as “Themselves” in the dataset, which is very general and not an actual role, hence these are deleted. Other similar roles, e.g. "himself", "herself", "extra" or "additional" are removed as well. Some roles define which year the role was from. This information is also removed. Finally, many of the string describing the roles are empty. These entries are deleted.
-
-\subsection{Data processing}
-There are multiple ways to handle the data that needs to be processed.
-One approach is to load all the data into the RAM. This technique is very demanding on the RAM, since everything is stored. Storing everything in the RAM has some clear advantages e.g. being able to go back and forth in the data or reading the same subset of the data multiple times. However if the size of the data exceeds the amount of RAM available, one might experience severe performance implications, due to e.g. memory swapping.
-Some datasets have a size which makes it impractical, sometimes even impossible, to store them in the RAM. This constraint leads to another approach, which is to stream the data. Streaming the data has advantages as well as disadvantages. Only a fraction of the whole data is stored in the RAM, imposing no extraordinary demand to the size of the available RAM. Only storing part of the data makes it cumbersome, and to some extent impossible, to go back and forth in the data.
+\subsection{Data cleaning}
+The data used for problem one, containing the roles and the string describing the actual role has superfluous information, e.g. the id of the actor, the id of the movie. The string describing the role can for instance contain information defining what specific policeman it was. In order to generalise the roles such information is removed, e.g. there is no difference between policeman \#1 and policeman \#2 in the cleaned dataset. Additionally unspecified roles are deleted. As an example multiple people has had a role playing themselves. Such a role is defined as “Themselves” in the dataset, which is very general and not an actual role, hence these are deleted. Other similar roles, e.g. "himself", "herself", "extra" or "additional" are removed as well. Some roles define which year the role was from. This information is also removed. Finally, many of the string describing the roles are empty. These entries are deleted.
 
 \subsubsection{Movie wrangling}
-The data obtained from imdb has been filtered to fit the problem. The movie data considered when comparing movies are the following:
+The data used for problem two has to be wrangled in order to fit the problem. The movie data considered when comparing movies are the following:
 \begin{itemize}
 \item Title
 \item Director ids
@@ -33,5 +26,6 @@ As seen in figure~\ref{fig:space_consumption} the space used by the naïve solut
 \\ \\ \\ \\
 \subsection{Applications}
 Locality-sensitive hashing have a wide range of applications where it proves to be relevant and quite popular. Here is mentioned a small part of the applications.  \\
-It is specifically widely used in the field of "Nearest neighbor search"; data compression, databases, data mining, image- and video-databases, machine learning, pattern recognition, etc. all use locality-sensitive hashing and especially when the dimensions of the problem are high, is the algorithm efficient. 
+It is specifically widely used in the field of "Nearest neighbor search"; data compression, databases, data mining, image- and video-databases, machine learning, pattern recognition, etc. all use locality-sensitive hashing and especially when the dimensions of the problem are high, is the algorithm efficient.
 It is also used in combination with the "k-nearest neighbors algorithm", also known as "k-nn", which is widely used, among others, in the fields of machine learning and recommender systems such as those used by Netflix\footnote{\url{www.netflix.com}} and Pandora\footnote{\url{www.pandora.com}}. Applications doing video- and Audio-fingerprinting, such as Shazam\footnote{\url{www.shazam.com}} and Youtube\footnote{\url{www.youtube.com}} can also use the algorithm in order to find music tracks that sounds most alike, as done by Shazam, or to automatically remove videos containing illegal footage, as done by Youtube.
+
