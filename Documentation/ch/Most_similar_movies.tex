@@ -60,10 +60,18 @@ The function \(p(j) = 1-(1-j^r)^b\) is the connection between the probability th
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=250px]{img/pGraph.eps}
-	\caption{The s-curve of \(p(j)\) with \(t = 0.6\), \(r = 5\) and \(b =20\)} 
+	\caption{The s-curve of \(p(j)\) with \(t = 0.6\), \(r = 5\) and \(b =20\). A pair with 0.6 similarity coefficient has a probability of 80,190\% of being identified as a candidate pair.} 
 	\label{fig:p_graph}
 \end{figure}
-The settings for \(b\) and \(r\) depends on the application of LSH. If the threshold is high, setting \(b\) and \(r\) to yield a low probability, might be reasonable. If the probability that a pair satisfying the threshold is identified as a candidate pair should be low, \(b\) should be increased and \(r\) lowered. Increasing b increases the fraction of false positives out of all \(n\) pairs, \(f_p\), and increasing \(r\) increases the fraction of false negatives, \(f_n\).\\ \\
+The settings for \(b\) and \(r\) depends on the application of LSH. If the threshold is high, setting \(b\) and \(r\) to yield a low probability, might be reasonable. If the probability that a pair satisfying the threshold is identified as a candidate pair should be high, \(b\) should be increased and \(r\) lowered. Increasing b increases the fraction of false positives out of all \(n\) pairs, \(f_p\), and increasing \(r\) increases the fraction of false negatives, \(f_n\). It should be avoided choosing too low values of \(b\) and \(r\). It might seem reasonable because of the increase in performance of the initial locality sensitive hashing, but it yield far too many false positives and false negatives, resulting in worse performance, as seen at figure ~\ref{fig:false_graph_low}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/pGraphLow.eps}
+	\caption{The s-curve of \(p(j)\) with \(t = 0.6\), \(r = 2\) and \(b =4\). A pair with 0.6 similarity coefficient has a probability of 83,223\% of being identified as a candidate pair. The number of false positives identified with these values of \(b\) and \(r\) results in sub-optimal performance.} 
+	\label{fig:p_graph_low}
+\end{figure}
+
 To make a more precise statement on the connection between \(b\), \(r\), \(f_n\) and \(f_p\), an assumption on the distribution of item pairs has to be made. It is assumed that the distribution of items on \(j\) is continuously uniform in the interval \([0, 1]\), which is a strong assumption, because for our data set, the number of item pairs with \(j<0.2\) is much higher than the number of item pairs with \(j>0.8\).\\ \\
 With a continuous uniform distribution, \(f_p\) can be estimated as the integral of \(p(j)\) from 0 to \(t\).
 \[f_p = \int\limits_0^t\ p(j)\mathrm{d}j\]

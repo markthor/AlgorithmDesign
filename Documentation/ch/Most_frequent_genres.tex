@@ -51,16 +51,21 @@ Every item is only looked at once making the time complexity \(O(m)\).
 %The threshold \textit{t} is the minimum amount of times a given role, must be present in the reservoir in order to be reported as included in \(H\).\ \\
 % and some heavy hitters might not  \textit{R}, is in \textit{H}, such that \(R \subseteq H\), but not necessarily \(H \subseteq R\). Therefore the algorithm might report false negatives.
 
-
-
-
- 
 \subsection{Misra Gries}
 The Misra Gries algorithm finds heavy hitters in a data stream. It maintains a map with up to \textit{k} entries, with keys being data element identifiers. If the set of element keys in the map is denoted \textit{K}, then \(H \subseteq K\), when the algorithm has finished. The size of the map is \(k = \frac{1}{\alpha} + 1\), meaning that the fraction an element has to constitute of \textit{S} to be in \textit{H} has an inverse relation to \textit{k}.
 For each element in the data stream, the map is updated. If the key of the element already exists in the map, the value is incremented by 1. Else if the size of the map is less than \textit{k}, then the element is added to the map, with a value of 1. If the element does not exist in the map and the size of the map is \textit{k}, then the value of each key is decremented by 1 and keys with value zero is removed. This decrement procedure is repeated until the size of the map is less than \textit{k} such that the element can be added to the map.
 
-\subsubsection{Worst case example}
-The soundness of the algorithm can be explained by constructing a worst case scenario. If \(H \subseteq K\), then an element occurring \(\alpha\) times must be included in the final map. Consider a stream, with an element \textit{e} being in \textit{H} with \(\alpha = 0.2\). The stream consists of 10 elements. The map has 6 entries in this example. \textit{e} occurs twice as the first two, and the most effective way of reducing the count of \textit{e} is by filling the map and presenting an element that is not yet included in the map. Because it takes 5 distinct elements to fill the map and one additional element to reduce the count of all elements, 6 elements are required to reduce \textit{e}. The stream has 10 elements and therefore this can only happen once. Therefore the count of \textit{e} is at least 1, when the algorithm terminates.\marginpar{Mangler lidt en konklusion der siger den ikke er sikker}
+\subsubsection{Frequency bounds}
+An upper bound on \(c\) for an item in a stream can be determined from the resulting count of the item \(c_m\). It is obvious that the sum of counters, \(C\) in the resulting map can not be negative and the number of times it is increased is equal to \(m\). Each time it is decreased, \(C\) is reduced by \(k\) and the number of times this happens is denoted \(d\). 
+\[C=m-dk\geq 0\]
+Since the expression must be non-negative, the following is deducted.
+\[d\leq \frac{m}{k}\]
+As \(c_m\) has been reduced at most \(d\) times, the following upper bound on the value of \(c\) is deducted.
+\[c_m \geq c-d \geq c-\frac{m}{k}\]
+Hence the upper bound on the actual value of occurences \(c\).
+\[c \leq c_m+\frac{m}{k}\]
+A lower bound is obviously.
+\[c \geq c_m\]
 
 \subsubsection{Additional filtering}
 DELETED SECTION, KEPT FOR REMEMBERING\marginpar{Den skal gerne rettes til at være single pass. False positives og false negatives er tilladte. Der skal beskrives sandsynligeheder for korrektheden}
