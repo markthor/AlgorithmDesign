@@ -1,6 +1,11 @@
 % !TEX root = ../preamble.tex
 \section{Finding similar movies}
-
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=250px]{img/Similaritysearchdiagram.png}
+	\caption{The steps in the algorithm} 
+	\label{fig:p_graph}
+\end{figure}
 \subsection{Jaccard similarity}
 Movie similarity is defined as Jaccard similarity of sets of a subset of movie attributes. Given two sets \textit{A} and \textit{B} the Jaccard similarity coefficient, \textit{j}, is defined as \(j = \frac{|A \cap B|}{|A \cup B|}\). \\ \\
 The attributes considered when measuring similarity is title, genres, actors and directors. A set of actors is the identifiers of the actors having roles in the movie, a set of directors is the identifiers of the directors, and a set of genres is the names of the genres of the movie. The set that movie similarity is measured from is the union of all these sets as well as the title of the movie and is denoted \textit{C}.
@@ -80,8 +85,9 @@ To estimate \(f_n\), we subtract the entire area from \(t\) to \(1\) which is \(
 Figure ~\ref{fig:false_graph} visualises the connection between \(b\), \(r\), \(f_n\) and \(f_p\). The connection is complicated, but it is apparent that the sum of \(f_n\) and \(f_p\) is reduced when \(b\) and \(r\) are increased.
 \\
 \\
-\subsubsection{Time complexity of similarity search}
+\subsubsection{Time complexity of locality-sensitive hashing}
 The time complexity of similarity search can be split into two parts, the preprocessing and the actual time to run a query after the preprocessing.\\
-The preprocessing step is hashing all N input points in L hashtables. This requires \(O(NLkt)\) time, as every input, must be put into all \(L\) hashtables and it takes \(kt\) time to do so, with \(t\) being the time to hash an input. The query step is 
+The preprocessing step hashes all N input points into L hashtables. This requires \(O(NLkt)\) time, as every input, must be put into all \(L\) hashtables and it takes \(kt\) time to do so, with \(t\) being the time to hash an input. The query step is 
 now to hash all input points into their correct bucket and retreive all candidatepairs. \\
-This is done over two stages. First; hashing all points into buckets take \(O(bNkt)\), since all input points is hashed as many times as there are bands. Next, all buckets is being checked if it contains any collisions between input points. This is a run through all the buckets with \(rN\) entries to look at, resulting in a running time of \(O(brN)\). This gives a total running time for the query \(O(bN(kt+r)\).
+This is done over two stages. First; hashing all points into buckets take \(O(bNkt)\), since all input points is hashed as many times as there are bands. Next, all buckets is being checked if it contains any collisions between input points. This is a run through all the buckets with \(rN\) entries to look at, resulting in a running time of \(O(brN)\). This gives a total running time for the query \(O(bN(kt+r)\). \\
+The wrangling of the dataset prior to preprocessing is not considered, as it has nothing to do with the actual algorithm.
