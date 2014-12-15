@@ -41,6 +41,8 @@
 \usepackage{float}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[bottom]{footmisc} % Stick footnote at bottom of page
+\usepackage{xr} % Cross referencing
+\externaldocument{Graph}
 \setlength{\parindent}{0pt} % No indent at new paragraph
 
 %%%% Bibliography
@@ -94,7 +96,6 @@
 }
 \date{December 17, 2014}
 
-
 %%% Begin document
 \begin{document}
 \maketitle
@@ -104,6 +105,8 @@
 \clearpage
 \tableofcontents
 \clearpage
+
+\externaldocument{Graph}
 
 \begingroup
 \let\clearpage\relax
