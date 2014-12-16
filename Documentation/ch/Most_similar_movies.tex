@@ -37,9 +37,11 @@ For the representation to be suitable for locality-sensitive hashing, each hash 
 \end{table}
 
 \subsection{Locality-sensitive hashing}
-The purpose of locality-sensitive hashing is finding similar items, without examining each pair of items. The fundamental idea is to hash the signature of items several times, while only compare the items, of which the hash values collide. Item pairs, of which the hash value collide are called candidate pairs.\\ \\
-The similarity threshold, \(t\), is the minimum similarity coefficient that a pair of items must have to be considered similar. The aim of LSH is to identify each pair with similarity greater than or equal to \(t\) as a candidate pair.\\ \\
-Given a collection of signatures generated from the Min Hashing preprocessing step, each with size \(n\), the dimensions of the signature are grouped in \(b\) bands, each spanning \(r\) dimensions. The candidate pairs are found by hashing the subset of dimensions of each signature in each bands to buckets, such that two signatures with the same value in a band hashes to the same bucket. If a pair of item signatures hashes to the same bucket at least once, the items are considered candidate pairs. \\ \\
+The purpose of locality-sensitive hashing is finding similar items, without examining each pair of items. The fundamental idea is to hash the signature of items several times, while only compare the items, of which the hash values collide. Item pairs, of which the hash value collide are called candidate pairs.\\
+
+The similarity threshold, \(t\), is the minimum similarity coefficient that a pair of items must have to be considered similar. The aim of LSH is to identify each pair with similarity greater than or equal to \(t\) as a candidate pair.\\
+
+Given a collection of signatures generated from the Min Hashing preprocessing step, each with size \(n\), the dimensions of the signature are grouped in \(b\) bands, each spanning \(r\) dimensions. The candidate pairs are found by hashing the subset of dimensions of each signature in each bands to buckets, such that two signatures with the same value in a band hashes to the same bucket. If a pair of item signatures hashes to the same bucket at least once, the items are considered candidate pairs.
 
 \begin{table}[h]
 \begin{tabular}{l||l|l|l|l}
